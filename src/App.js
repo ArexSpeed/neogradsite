@@ -1,4 +1,4 @@
-import {BrowederRouter as Router, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import './App.css';
 import Build from './components/Build';
 import Docs from './components/Docs';
@@ -8,8 +8,9 @@ import Nav from './components/Nav';
 function App() {
   return (
     <div className="App">
-      <Nav />
+      
       <Router>
+        <Nav />
         <Switch>
           <Route exact path='\' component={Main} />
           <Route exact path='\build' component={Build} />

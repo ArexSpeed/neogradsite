@@ -1,0 +1,20 @@
+.nav{
+  width: 100vw;
+  height: 50px;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  padding: auto 10px;
+  background: #fff;
+  &-brand{
+    margin: 5px 20px;
+  }
+  &-links{
+    margin: auto 10px;
+  }
+  &-item{
+    margin: 5px;
+  }
+}
