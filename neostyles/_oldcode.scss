@@ -1,0 +1,2793 @@
+@import "colors";
+
+$colors: (
+  green: $green,
+  lightgreen: $lightgreen,
+  darkgreen: $darkgreen,
+  blue: $blue,
+  red: $red,
+  yellow: $yellow,
+  orange: $orange,
+  violet: $violet,
+  pink: $pink,
+  white: $white,
+  black: $black,
+  gold: $gold,
+  silver: $silver,
+  brown: $brown
+);
+
+@each $key, $val in $colors {
+  .btn-neograd {
+    color: #000;
+    transition: all 400ms ease-in-out;
+    text-align: center;
+    border: none;
+    &.color-#{$key} {
+      background: linear-gradient(10deg, lighten($val, 10%), darken($val, 10%));
+      box-shadow: 1px 1px 40px $val inset;
+      &:hover {
+        box-shadow: 0 0 10px 0 $val inset, 0 0 10px 3px $val;
+        background: transparent;
+      }
+    }
+  }
+}
+
+// .btn-neograd {
+//   color: #000;
+//   transition: all 400ms ease-in-out;
+//   text-align: center;
+//   border: none;
+//   &.color-green {
+//     background: linear-gradient(10deg, $lightgreen, $darkgreen);
+//     box-shadow: 1px 1px 40px $green inset;
+//     &:hover {
+//       box-shadow: 0 0 10px 0 $green inset, 0 0 10px 3px $green;
+//       background: transparent;
+//     }
+//   }
+
+// &.color-blue {
+//   background: linear-gradient(1deg, $lightblue, $darkblue);
+//   border-color: $blue;
+//   box-shadow: 0 0 40px 0 $blue inset;
+//   &:hover {
+//     box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 3px $blue;
+//     background: transparent;
+//   }
+// }
+// &.color-red {
+//   background: linear-gradient(1deg, $lightred, $darkred);
+//   border-color: $red;
+//   box-shadow: 0 0 40px 0 $red inset;
+//   &:hover {
+//     box-shadow: 0 0 10px 0 $red inset, 0 0 10px 3px $red;
+//     background: transparent;
+//   }
+// }
+// &.color-yellow {
+//   background: linear-gradient(to left, $lightyellow, $darkyellow);
+//   border-color: $yellow;
+//   box-shadow: 0 0 40px 0 $yellow inset;
+//   &:hover {
+//     box-shadow: 0 0 10px 0 $yellow inset, 0 0 10px 3px $yellow;
+//     background: transparent;
+//   }
+// }
+//   &.color-violet {
+//     background: linear-gradient(to left, $lightviolet, $darkviolet);
+//     border-color: $violet;
+//     box-shadow: 0 0 40px 0 $violet inset;
+//     &:hover {
+//       box-shadow: 0 0 10px 0 $violet inset, 0 0 10px 3px $violet;
+//       background: transparent;
+//     }
+//   }
+//   &.color-orange {
+//     background: linear-gradient(to left, $lightorange, $darkorange);
+//     border-color: $orange;
+//     box-shadow: 0 0 40px 0 $orange inset;
+//     &:hover {
+//       box-shadow: 0 0 10px 0 $orange inset, 0 0 10px 3px $orange;
+//       background: transparent;
+//     }
+//   }
+//   &.color-pink {
+//     background: linear-gradient(to left, $lightpink, $darkpink);
+//     border-color: $pink;
+//     box-shadow: 0 0 40px 0 $pink inset;
+//     &:hover {
+//       box-shadow: 0 0 10px 0 $pink inset, 0 0 10px 3px $pink;
+//       background: transparent;
+//     }
+//   }
+// }
+
+// Neograd Reverse
+.btn-neograd-r {
+  background: transparent;
+  &.color-green {
+    box-shadow: 0 0 10px 0 $green inset, 0 0 10px 0px $green;
+    border-color: $green;
+    color: $green;
+    &:hover {
+      background: linear-gradient(to left, $lightgreen, $darkgreen);
+      box-shadow: 0 0 40px 0px $green inset;
+      color: #000;
+      transition: all 400ms ease-in-out;
+    }
+  }
+
+  &.color-blue {
+    box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 0px $blue;
+    border-color: $blue;
+    color: $blue;
+    &:hover {
+      background: linear-gradient(to left, $lightblue, $darkblue);
+      box-shadow: 0 0 40px 0px $blue inset;
+      color: #000;
+      transition: all 400ms ease-in-out;
+    }
+  }
+  &.color-red {
+    box-shadow: 0 0 10px 0 $red inset, 0 0 10px 0px $red;
+    border-color: $red;
+    color: $red;
+    &:hover {
+      background: linear-gradient(to left, $lightred, $darkred);
+      box-shadow: 0 0 40px 0px $red inset;
+      color: #000;
+      transition: all 400ms ease-in-out;
+    }
+  }
+  &.color-yellow {
+    box-shadow: 0 0 10px 0 $yellow inset, 0 0 10px 0px $yellow;
+    border-color: $yellow;
+    color: $yellow;
+    &:hover {
+      background: linear-gradient(to left, $lightyellow, $darkyellow);
+      box-shadow: 0 0 40px 0px $yellow inset;
+      color: #000;
+      transition: all 400ms ease-in-out;
+    }
+  }
+  &.color-violet {
+    box-shadow: 0 0 10px 0 $violet inset, 0 0 10px 0px $violet;
+    border-color: $violet;
+    color: $violet;
+    &:hover {
+      background: linear-gradient(to left, $lightviolet, $darkviolet);
+      box-shadow: 0 0 40px 0px $violet inset;
+      color: #000;
+      transition: all 400ms ease-in-out;
+    }
+  }
+  &.color-orange {
+    box-shadow: 0 0 10px 0 $orange inset, 0 0 10px 0px $orange;
+    border-color: $orange;
+    color: $orange;
+    &:hover {
+      background: linear-gradient(to left, $lightorange, $darkorange);
+      box-shadow: 0 0 40px 0px $orange inset;
+      color: #000;
+      transition: all 400ms ease-in-out;
+    }
+  }
+  &.color-pink {
+    box-shadow: 0 0 10px 0 $pink inset, 0 0 10px 0px $pink;
+    border-color: $pink;
+    color: $pink;
+    &:hover {
+      background: linear-gradient(to left, $lightpink, $darkpink);
+      box-shadow: 0 0 40px 0px $pink inset;
+      color: #000;
+      transition: all 400ms ease-in-out;
+    }
+  }
+}
+
+// Gradent
+.btn-grad {
+  background: linear-gradient(to left, $lightgreen, $darkgreen);
+  border: none;
+  color: #000;
+  transition: all 200ms ease-in-out;
+  &.color-green {
+    background: linear-gradient(to left, $lightgreen, $darkgreen);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $lightgreen,
+        inset 3px -3px 10px $darkgreen;
+    }
+  }
+  &-2.color-green {
+    background: linear-gradient(to left, $darkgreen, $lightgreen);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $darkgreen,
+        inset 3px -3px 10px $lightgreen;
+    }
+  }
+  &-3.color-green {
+    background: radial-gradient($darkgreen, $lightgreen);
+    &:hover {
+      background: radial-gradient($lightgreen, $darkgreen);
+    }
+  }
+  &-4.color-green {
+    background: radial-gradient($lightgreen, $darkgreen);
+    &:hover {
+      background: radial-gradient($darkgreen, $lightgreen);
+    }
+  }
+  &.color-blue {
+    background: linear-gradient(to left, $lightblue, $darkblue);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $lightblue, inset 3px -3px 10px $darkblue;
+    }
+  }
+  &-2.color-blue {
+    background: linear-gradient(to left, $darkblue, $lightblue);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $darkblue, inset 3px -3px 10px $lightblue;
+    }
+  }
+  &-3.color-blue {
+    background: radial-gradient($darkblue, $lightblue);
+    &:hover {
+      background: radial-gradient($lightblue, $darkblue);
+    }
+  }
+  &-4.color-blue {
+    background: radial-gradient($lightblue, $darkblue);
+    &:hover {
+      background: radial-gradient($darkblue, $lightblue);
+    }
+  }
+  &.color-red {
+    background: linear-gradient(to left, $lightred, $darkred);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $lightred, inset 3px -3px 10px $darkred;
+    }
+  }
+  &-2.color-red {
+    background: linear-gradient(to left, $darkred, $lightred);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $darkred, inset 3px -3px 10px $lightred;
+    }
+  }
+  &-3.color-red {
+    background: radial-gradient($darkred, $lightred);
+    &:hover {
+      background: radial-gradient($lightred, $darkred);
+    }
+  }
+  &-4.color-red {
+    background: radial-gradient($lightred, $darkred);
+    &:hover {
+      background: radial-gradient($darkred, $lightred);
+    }
+  }
+  &.color-yellow {
+    background: linear-gradient(to left, $lightyellow, $darkyellow);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $lightyellow,
+        inset 3px -3px 10px $darkyellow;
+    }
+  }
+  &-2.color-yellow {
+    background: linear-gradient(to left, $darkyellow, $lightyellow);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $darkyellow,
+        inset 3px -3px 10px $lightyellow;
+    }
+  }
+  &-3.color-yellow {
+    background: radial-gradient($darkyellow, $lightyellow);
+    &:hover {
+      background: radial-gradient($lightyellow, $darkyellow);
+    }
+  }
+  &-4.color-yellow {
+    background: radial-gradient($lightyellow, $darkyellow);
+    &:hover {
+      background: radial-gradient($darkyellow, $lightyellow);
+    }
+  }
+  &.color-pink {
+    background: linear-gradient(to left, $lightpink, $darkpink);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $lightpink, inset 3px -3px 10px $darkpink;
+    }
+  }
+  &-2.color-pink {
+    background: linear-gradient(to left, $darkpink, $lightpink);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $darkpink, inset 3px -3px 10px $lightpink;
+    }
+  }
+  &-3.color-pink {
+    background: radial-gradient($darkpink, $lightpink);
+    &:hover {
+      background: radial-gradient($lightpink, $darkpink);
+    }
+  }
+  &-4.color-pink {
+    background: radial-gradient($lightpink, $darkpink);
+    &:hover {
+      background: radial-gradient($darkpink, $lightpink);
+    }
+  }
+  &.color-violet {
+    background: linear-gradient(to left, $lightviolet, $darkviolet);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $lightviolet,
+        inset 3px -3px 10px $darkviolet;
+    }
+  }
+  &-2.color-violet {
+    background: linear-gradient(to left, $darkviolet, $lightviolet);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $darkviolet,
+        inset 3px -3px 10px $lightviolet;
+    }
+  }
+  &-3.color-violet {
+    background: radial-gradient($darkviolet, $lightviolet);
+    &:hover {
+      background: radial-gradient($lightviolet, $darkviolet);
+    }
+  }
+  &-4.color-violet {
+    background: radial-gradient($lightviolet, $darkviolet);
+    &:hover {
+      background: radial-gradient($darkviolet, $lightviolet);
+    }
+  }
+  &.color-orange {
+    background: linear-gradient(to left, $lightorange, $darkorange);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $lightorange,
+        inset 3px -3px 10px $darkorange;
+    }
+  }
+  &-2.color-orange {
+    background: linear-gradient(to left, $darkorange, $lightorange);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $darkorange,
+        inset 3px -3px 10px $lightorange;
+    }
+  }
+  &-3.color-orange {
+    background: radial-gradient($darkorange, $lightorange);
+    &:hover {
+      background: radial-gradient($lightorange, $darkorange);
+    }
+  }
+  &-4.color-orange {
+    background: radial-gradient($lightorange, $darkorange);
+    &:hover {
+      background: radial-gradient($darkorange, $lightorange);
+    }
+  }
+  &.color-black {
+    background: linear-gradient(to left, $lightblack, $darkblack);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $lightblack,
+        inset 3px -3px 10px $darkblack;
+    }
+  }
+  &-2.color-black {
+    background: linear-gradient(to left, $darkblack, $lightblack);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $darkblack,
+        inset 3px -3px 10px $lightblack;
+    }
+  }
+  &-3.color-black {
+    background: radial-gradient($darkblack, $lightblack);
+    &:hover {
+      background: radial-gradient($lightblack, $darkblack);
+    }
+  }
+  &-4.color-black {
+    background: radial-gradient($lightblack, $darkblack);
+    &:hover {
+      background: radial-gradient($darkblack, $lightblack);
+    }
+  }
+  &.color-white {
+    background: linear-gradient(to left, $lightwhite, $darkwhite);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $lightwhite,
+        inset 3px -3px 10px $darkwhite;
+    }
+  }
+  &-2.color-white {
+    background: linear-gradient(to left, $darkwhite, $lightwhite);
+    &:hover {
+      box-shadow: inset -3px 3px 10px $darkwhite,
+        inset 3px -3px 10px $lightwhite;
+    }
+  }
+  &-3.color-white {
+    background: radial-gradient($darkwhite, $lightwhite);
+    &:hover {
+      background: radial-gradient($lightwhite, $darkwhite);
+    }
+  }
+  &-4.color-white {
+    background: radial-gradient($lightwhite, $darkwhite);
+    &:hover {
+      background: radial-gradient($darkwhite, $lightwhite);
+    }
+  }
+}
+
+// Fluors
+.btn-fluor {
+  border: none;
+  &.color-green {
+    background: $green-neon;
+  }
+  &.color-blue {
+    background: $blue-neon;
+  }
+  &.color-red {
+    background: $red-neon;
+  }
+  &.color-yellow {
+    background: $yellow-neon;
+  }
+  &.color-pink {
+    background: $pink-neon;
+  }
+  &.color-orange {
+    background: $orange-neon;
+  }
+  &.color-violet {
+    background: $violet-neon;
+  }
+  &-border {
+    background: transparent;
+    border: 3px solid;
+    &.color-green {
+      border-color: $green-neon;
+      color: $green-neon;
+    }
+    &.color-blue {
+      border-color: $blue-neon;
+      color: $blue-neon;
+    }
+    &.color-red {
+      border-color: $red-neon;
+      color: $red-neon;
+    }
+    &.color-yellow {
+      border-color: $yellow-neon;
+      color: $yellow-neon;
+    }
+    &.color-pink {
+      border-color: $pink-neon;
+      color: $pink-neon;
+    }
+    &.color-orange {
+      border-color: $orange-neon;
+      color: $orange-neon;
+    }
+    &.color-violet {
+      border-color: $violet-neon;
+      color: $violet-neon;
+    }
+  }
+}
+
+// Neon
+.btn-neon {
+  border: none;
+  transition: box-shadow 400ms;
+  &.color-green {
+    background: $green-neon;
+    box-shadow: 0 0 10px $green-neon, 0 0 20px $green-neon inset,
+      0 0 20px $green-neon, 0 0 10px $green-neon inset;
+    &:hover {
+      box-shadow: 0 0 15px $green-neon, 0 0 25px $green-neon inset,
+        0 0 25px $green-neon, 0 0 15px $green-neon inset;
+    }
+  }
+  &.color-blue {
+    background: $blue-neon;
+    box-shadow: 0 0 10px $blue-neon, 0 0 20px $blue-neon inset,
+      0 0 20px $blue-neon, 0 0 10px $blue-neon inset;
+    &:hover {
+      box-shadow: 0 0 15px $blue-neon, 0 0 25px $blue-neon inset,
+        0 0 25px $blue-neon, 0 0 15px $blue-neon inset;
+    }
+  }
+  &.color-red {
+    background: $red-neon;
+    box-shadow: 0 0 10px $red-neon, 0 0 20px $red-neon inset, 0 0 20px $red-neon,
+      0 0 10px $red-neon inset;
+    &:hover {
+      box-shadow: 0 0 15px $red-neon, 0 0 25px $red-neon inset,
+        0 0 25px $red-neon, 0 0 15px $red-neon inset;
+    }
+  }
+  &.color-yellow {
+    background: $yellow-neon;
+    box-shadow: 0 0 10px $yellow-neon, 0 0 20px $yellow-neon inset,
+      0 0 20px $yellow-neon, 0 0 10px $yellow-neon inset;
+    &:hover {
+      box-shadow: 0 0 15px $yellow-neon, 0 0 25px $yellow-neon inset,
+        0 0 25px $yellow-neon, 0 0 15px $yellow-neon inset;
+    }
+  }
+  &.color-pink {
+    background: $pink-neon;
+    box-shadow: 0 0 10px $pink-neon, 0 0 20px $pink-neon inset,
+      0 0 20px $pink-neon, 0 0 10px $pink-neon inset;
+    &:hover {
+      box-shadow: 0 0 15px $pink-neon, 0 0 25px $pink-neon inset,
+        0 0 25px $pink-neon, 0 0 15px $pink-neon inset;
+    }
+  }
+  &.color-orange {
+    background: $orange-neon;
+    box-shadow: 0 0 10px $orange-neon, 0 0 20px $orange-neon inset,
+      0 0 20px $orange-neon, 0 0 10px $orange-neon inset;
+    &:hover {
+      box-shadow: 0 0 15px $orange-neon, 0 0 25px $orange-neon inset,
+        0 0 25px $orange-neon, 0 0 15px $orange-neon inset;
+    }
+  }
+  &.color-violet {
+    background: $violet-neon;
+    box-shadow: 0 0 10px $violet-neon, 0 0 20px $violet-neon inset,
+      0 0 20px $violet-neon, 0 0 10px $violet-neon inset;
+    &:hover {
+      box-shadow: 0 0 15px $violet-neon, 0 0 25px $violet-neon inset,
+        0 0 25px $violet-neon, 0 0 15px $violet-neon inset;
+    }
+  }
+
+  // Border
+  &-border {
+    background: transparent;
+    border: none;
+    transition: box-shadow 400ms;
+    &.color-green {
+      box-shadow: 0 0 10px $green-neon, 0 0 10px 3px $green-neon inset;
+      color: $green-neon;
+      &:hover {
+        box-shadow: 0 0 15px $green-neon, 0 0 15px 3px $green-neon inset;
+      }
+    }
+    &.color-blue {
+      box-shadow: 0 0 10px $blue-neon, 0 0 10px 3px $blue-neon inset;
+      color: $blue-neon;
+      &:hover {
+        box-shadow: 0 0 15px $blue-neon, 0 0 15px 3px $blue-neon inset;
+      }
+    }
+    &.color-red {
+      box-shadow: 0 0 10px $red-neon, 0 0 10px 3px $red-neon inset;
+      color: $red-neon;
+      &:hover {
+        box-shadow: 0 0 15px $red-neon, 0 0 15px 3px $red-neon inset;
+      }
+    }
+    &.color-yellow {
+      box-shadow: 0 0 10px $yellow-neon, 0 0 10px 3px $yellow-neon inset;
+      color: $yellow-neon;
+      &:hover {
+        box-shadow: 0 0 15px $yellow-neon, 0 0 15px 3px $yellow-neon inset;
+      }
+    }
+    &.color-orange {
+      box-shadow: 0 0 10px $orange-neon, 0 0 10px 3px $orange-neon inset;
+      color: $orange-neon;
+      &:hover {
+        box-shadow: 0 0 15px $orange-neon, 0 0 15px 3px $orange-neon inset;
+      }
+    }
+    &.color-pink {
+      box-shadow: 0 0 10px $pink-neon, 0 0 10px 3px $pink-neon inset;
+      color: $pink-neon;
+      &:hover {
+        box-shadow: 0 0 15px $pink-neon, 0 0 15px 3px $pink-neon inset;
+      }
+    }
+    &.color-violet {
+      box-shadow: 0 0 10px $violet-neon, 0 0 10px 3px $violet-neon inset;
+      color: $violet-neon;
+      &:hover {
+        box-shadow: 0 0 15px $violet-neon, 0 0 15px 3px $violet-neon inset;
+      }
+    }
+  }
+  &-reflex {
+    color: #000;
+    border: none;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    margin: 30px 0;
+    &.color-green {
+      background: $green-neon;
+      &:hover {
+        color: #000;
+        box-shadow: 0 0 5px $green-neon, 0 0 25px $green-neon,
+          0 0 50px $green-neon;
+      }
+    }
+    &.color-blue {
+      background: $blue-neon;
+      &:hover {
+        color: #000;
+        box-shadow: 0 0 5px $blue-neon, 0 0 25px $blue-neon, 0 0 50px $blue-neon;
+      }
+    }
+    &.color-red {
+      background: $red-neon;
+      &:hover {
+        color: #000;
+        box-shadow: 0 0 5px $red-neon, 0 0 25px $red-neon, 0 0 50px $red-neon;
+      }
+    }
+    &.color-yellow {
+      background: $yellow-neon;
+      &:hover {
+        color: #000;
+        box-shadow: 0 0 5px $yellow-neon, 0 0 25px $yellow-neon,
+          0 0 50px $yellow-neon;
+      }
+    }
+    &.color-orange {
+      background: $orange-neon;
+      &:hover {
+        color: #000;
+        box-shadow: 0 0 5px $orange-neon, 0 0 25px $orange-neon,
+          0 0 50px $orange-neon;
+      }
+    }
+    &.color-pink {
+      background: $pink-neon;
+      &:hover {
+        color: #000;
+        box-shadow: 0 0 5px $pink-neon, 0 0 25px $pink-neon, 0 0 50px $pink-neon;
+      }
+    }
+    &.color-violet {
+      background: $violet-neon;
+      &:hover {
+        color: #000;
+        box-shadow: 0 0 5px $violet-neon, 0 0 25px $violet-neon,
+          0 0 50px $violet-neon;
+      }
+    }
+    // Reflex text
+    &-text {
+      background: transparent;
+      border: none;
+      transition: 0.5s;
+      letter-spacing: 4px;
+      -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+      &.color-green {
+        color: $green-neon;
+      }
+      &.color-red {
+        color: $red-neon;
+      }
+      &.color-blue {
+        color: $blue-neon;
+      }
+      &.color-yellow {
+        color: $yellow-neon;
+      }
+      &.color-pink {
+        color: $pink-neon;
+      }
+      &.color-orange {
+        color: $orange-neon;
+      }
+      &.color-violet {
+        color: $violet-neon;
+      }
+    }
+
+    //end neon-reflex
+  }
+
+  // Neon Border move
+  &-border-move {
+    position: relative;
+    padding: 10px 30px;
+    margin: 0 15px;
+    color: inherit;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid;
+      border-left: 2px solid;
+      border-color: inherit;
+      transition: 0.5s;
+    }
+    &:hover:before {
+      width: 100%;
+      height: 100%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 10px;
+      height: 10px;
+      border-bottom: 2px solid;
+      border-right: 2px solid;
+      border-color: inherit;
+      transition: 0.5s;
+    }
+    &:hover::after {
+      width: 100%;
+      height: 100%;
+    }
+    &.color-green {
+      color: $green-neon;
+    }
+    &.color-red {
+      color: $red-neon;
+    }
+    &.color-blue {
+      color: $blue-neon;
+    }
+    &.color-yellow {
+      color: $yellow-neon;
+    }
+    &.color-pink {
+      color: $pink-neon;
+    }
+    &.color-orange {
+      color: $orange-neon;
+    }
+    &.color-violet {
+      color: $violet-neon;
+    }
+  }
+}
+
+// Move hover
+.btn-move-hover {
+  background: none;
+  border: 4px solid;
+  border-radius: 0;
+  cursor: pointer;
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 4px;
+    background-color: gray;
+    transform: skewX(50deg);
+    transition: 0.4s linear;
+    z-index: 100;
+  }
+  &::before {
+    top: -4px;
+    left: 10%;
+  }
+  &::after {
+    bottom: -4px;
+    right: 10%;
+  }
+  &:hover::before {
+    left: 80%;
+  }
+  &:hover::after {
+    right: 80%;
+  }
+  &.color-green {
+    color: $green-neon;
+  }
+  &.color-red {
+    color: $red-neon;
+  }
+  &.color-blue {
+    color: $blue-neon;
+  }
+  &.color-yellow {
+    color: $yellow-neon;
+  }
+  &.color-pink {
+    color: $pink-neon;
+  }
+  &.color-orange {
+    color: $orange-neon;
+  }
+  &.color-violet {
+    color: $violet-neon;
+  }
+}
+
+// SLIDE
+////SLIDE LEFT////
+.btn-slide-left {
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #fff;
+    transition: all 1s;
+    border-radius: inherit;
+  }
+  &.color-green-blue {
+    box-shadow: inset 0px 0px 5px rgba(53, 214, 240, 1),
+      inset 0px 0px 5px rgba(23, 245, 46, 1);
+    &::after {
+      //background-image: linear-gradient(60deg, $green, $blue, $green);
+      background: linear-gradient(61deg, $lightblue 0%, $green 100%);
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 1px rgba(53, 214, 240, 1),
+        0px 0px 1px rgba(23, 245, 46, 1);
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-green {
+    box-shadow: inset 0px 0px 5px $lightgreen, inset 0px 0px 5px $green;
+    &::after {
+      //background-image: linear-gradient(60deg, $green, $blue, $green);
+      background: linear-gradient(61deg, $lightgreen 0%, $green 100%);
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 1px $green, 0px 0px 1px $lightgreen;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-blue {
+    box-shadow: inset 0px 0px 5px $lightblue, inset 0px 0px 5px $blue;
+    &::after {
+      background: linear-gradient(61deg, $lightblue 0%, $blue 100%);
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 1px $blue, 0px 0px 1px $lightblue;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-red {
+    box-shadow: inset 0px 0px 5px $lightred, inset 0px 0px 5px $red;
+    &::after {
+      background: linear-gradient(61deg, $lightred 0%, $red 100%);
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 1px $red, 0px 0px 1px $lightred;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-yellow {
+    box-shadow: inset 0px 0px 5px $lightyellow, inset 0px 0px 5px yellow;
+    &::after {
+      background: linear-gradient(61deg, $lightyellow 0%, yellow 100%);
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 1px yellow, 0px 0px 1px $lightyellow;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-violet {
+    box-shadow: inset 0px 0px 5px $lightviolet, inset 0px 0px 5px $violet;
+    &::after {
+      background: linear-gradient(61deg, $lightviolet 0%, $violet 100%);
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 1px $violet, 0px 0px 1px $lightviolet;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-orange {
+    box-shadow: inset 0px 0px 5px $lightorange, inset 0px 0px 5px $orange;
+    &::after {
+      background: linear-gradient(61deg, $lightorange 0%, $orange 100%);
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 1px $orange, 0px 0px 1px $lightorange;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-pink {
+    box-shadow: inset 0px 0px 5px $lightpink, inset 0px 0px 5px $pink;
+    &::after {
+      background: linear-gradient(61deg, $lightpink 0%, $pink 100%);
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 1px $pink, 0px 0px 1px $lightpink;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-brown {
+    box-shadow: inset 0px 0px 5px $lightbrown, inset 0px 0px 5px $brown;
+    &::after {
+      background: linear-gradient(61deg, $lightbrown 0%, $brown 100%);
+    }
+    &:hover {
+      color: $white;
+      box-shadow: 0px 0px 1px $brown, 0px 0px 1px $lightbrown;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-white {
+    box-shadow: inset 0px 0px 5px $lightwhite, inset 0px 0px 5px $white;
+    &::after {
+      background: linear-gradient(61deg, $lightwhite 0%, $white 100%);
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 1px $white, 0px 0px 1px $lightwhite;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+  &.color-black {
+    box-shadow: inset 0px 0px 5px $lightblack, inset 0px 0px 5px $black;
+    &::after {
+      background: linear-gradient(61deg, $lightblack 0%, $black 100%);
+    }
+    &:hover {
+      color: $white;
+      box-shadow: 0px 0px 1px $black, 0px 0px 1px $lightblack;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-silver {
+    box-shadow: inset 0px 0px 5px $silver, inset 0px 0px 5px $silver;
+    &::after {
+      background: linear-gradient(61deg, $silver 0%, $silver 100%);
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 1px $silver, 0px 0px 1px $silver;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-gold {
+    box-shadow: inset 0px 0px 5px $gold, inset 0px 0px 5px $gold;
+    &::after {
+      background: linear-gradient(61deg, $gold 0%, $gold 100%);
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 1px $gold, 0px 0px 1px $gold;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+}
+
+////SLIDE RIGHT/////
+.btn-slide-right {
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    color: #fff;
+    transition: all 0.5s;
+    border-radius: inherit;
+  }
+  &.color-green {
+    box-shadow: inset 0px 0px 5px $green;
+    &::after {
+      background: $green;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $green;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-blue {
+    box-shadow: inset 0px 0px 5px $blue;
+    &::after {
+      background: $blue;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $blue;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-red {
+    box-shadow: inset 0px 0px 5px $red;
+    &::after {
+      background: $red;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $red;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-violet {
+    box-shadow: inset 0px 0px 5px $violet;
+    &::after {
+      background: $violet;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $violet;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-yellow {
+    box-shadow: inset 0px 0px 5px $yellow;
+    &::after {
+      background: $yellow;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $yellow;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-orange {
+    box-shadow: inset 0px 0px 5px $orange;
+    &::after {
+      background: $orange;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $orange;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-pink {
+    box-shadow: inset 0px 0px 5px $pink;
+    &::after {
+      background: $pink;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $pink;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-brown {
+    box-shadow: inset 0px 0px 5px $brown;
+    &::after {
+      background: $brown;
+    }
+    &:hover {
+      color: $white;
+      box-shadow: 0px 0px 5px $brown;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+  &.color-white {
+    box-shadow: inset 0px 0px 5px $white;
+    &::after {
+      background: $white;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $white;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+  &.color-black {
+    box-shadow: inset 0px 0px 5px $black;
+    &::after {
+      background: $black;
+    }
+    &:hover {
+      color: $white;
+      box-shadow: 0px 0px 5px $black;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-gold {
+    box-shadow: inset 0px 0px 5px $gold;
+    &::after {
+      background: $gold;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $gold;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-silver {
+    box-shadow: inset 0px 0px 5px $silver;
+    &::after {
+      background: $silver;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $silver;
+      &::after {
+        width: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+}
+
+////SLIDE DOWN////
+.btn-slide-down {
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    color: #fff;
+    transition: all 0.5s;
+    border-radius: inherit;
+  }
+  &.color-green {
+    box-shadow: inset 0px 0px 5px $green;
+    &::after {
+      background: $green;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $green;
+      &::after {
+        height: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+}
+
+////SLIDE UP////
+.btn-slide-up {
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    color: #fff;
+    transition: all 0.5s;
+    border-radius: inherit;
+  }
+  &.color-green {
+    box-shadow: inset 0px 0px 5px $green;
+    &::after {
+      background: $green;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $green;
+      &::after {
+        height: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-blue {
+    box-shadow: inset 0px 0px 5px $blue;
+    &::after {
+      background: $blue;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $blue;
+      &::after {
+        height: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-red {
+    box-shadow: inset 0px 0px 5px $red;
+    &::after {
+      background: $red;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $red;
+      &::after {
+        height: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-violet {
+    box-shadow: inset 0px 0px 5px $violet;
+    &::after {
+      background: $violet;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $violet;
+      &::after {
+        height: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-yellow {
+    box-shadow: inset 0px 0px 5px $yellow;
+    &::after {
+      background: $yellow;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $yellow;
+      &::after {
+        height: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-orange {
+    box-shadow: inset 0px 0px 5px $orange;
+    &::after {
+      background: $orange;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $orange;
+      &::after {
+        height: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-pink {
+    box-shadow: inset 0px 0px 5px $pink;
+    &::after {
+      background: $pink;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $pink;
+      &::after {
+        height: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-brown {
+    box-shadow: inset 0px 0px 5px $brown;
+    &::after {
+      background: $brown;
+    }
+    &:hover {
+      color: $white;
+      box-shadow: 0px 0px 5px $brown;
+      &::after {
+        height: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-white {
+    box-shadow: inset 0px 0px 5px $white;
+    &::after {
+      background: $white;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $white;
+      &::after {
+        height: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-black {
+    box-shadow: inset 0px 0px 5px $black;
+    &::after {
+      background: $black;
+    }
+    &:hover {
+      color: $white;
+      box-shadow: 0px 0px 5px $black;
+      &::after {
+        height: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-silver {
+    box-shadow: inset 0px 0px 5px $silver;
+    &::after {
+      background: $silver;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $silver;
+      &::after {
+        height: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-gold {
+    box-shadow: inset 0px 0px 5px $gold;
+    &::after {
+      background: $gold;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $gold;
+      &::after {
+        height: 100%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+}
+
+////SLIDE MIDDLE IN////
+.btn-slide-middle-in {
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    color: #fff;
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    color: #fff;
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  &.color-green {
+    box-shadow: inset 0px 0px 5px $green;
+    &::after {
+      background: $green;
+    }
+    &::before {
+      background: $green;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $green;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+        transition: 1s;
+      }
+    }
+  }
+
+  &.color-blue {
+    box-shadow: inset 0px 0px 5px $blue;
+    &::after {
+      background: $blue;
+    }
+    &::before {
+      background: $blue;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $blue;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+        transition: 1s;
+      }
+    }
+  }
+
+  &.color-red {
+    box-shadow: inset 0px 0px 5px $red;
+    &::after {
+      background: $red;
+    }
+    &::before {
+      background: $red;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $red;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+        transition: 1s;
+      }
+    }
+  }
+
+  &.color-violet {
+    box-shadow: inset 0px 0px 5px $violet;
+    &::after {
+      background: $violet;
+    }
+    &::before {
+      background: $violet;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $violet;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+        transition: 1s;
+      }
+    }
+  }
+
+  &.color-yellow {
+    box-shadow: inset 0px 0px 5px $yellow;
+    &::after {
+      background: $yellow;
+    }
+    &::before {
+      background: $yellow;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $yellow;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+        transition: 1s;
+      }
+    }
+  }
+
+  &.color-orange {
+    box-shadow: inset 0px 0px 5px $orange;
+    &::after {
+      background: $orange;
+    }
+    &::before {
+      background: $orange;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $orange;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+        transition: 1s;
+      }
+    }
+  }
+
+  &.color-pink {
+    box-shadow: inset 0px 0px 5px $pink;
+    &::after {
+      background: $pink;
+    }
+    &::before {
+      background: $pink;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $pink;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+        transition: 1s;
+      }
+    }
+  }
+
+  &.color-brown {
+    box-shadow: inset 0px 0px 5px $brown;
+    &::after {
+      background: $brown;
+    }
+    &::before {
+      background: $brown;
+    }
+    &:hover {
+      color: $white;
+      box-shadow: 0px 0px 5px $brown;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+        transition: 1s;
+      }
+    }
+  }
+
+  &.color-white {
+    box-shadow: inset 0px 0px 5px $white;
+    &::after {
+      background: $white;
+    }
+    &::before {
+      background: $white;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $white;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+        transition: 1s;
+      }
+    }
+  }
+
+  &.color-black {
+    box-shadow: inset 0px 0px 5px $black;
+    &::after {
+      background: $black;
+    }
+    &::before {
+      background: $black;
+    }
+    &:hover {
+      color: $white;
+      box-shadow: 0px 0px 5px $black;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+        transition: 1s;
+      }
+    }
+  }
+
+  &.color-silver {
+    box-shadow: inset 0px 0px 5px $silver;
+    &::after {
+      background: $silver;
+    }
+    &::before {
+      background: $silver;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $silver;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+        transition: 1s;
+      }
+    }
+  }
+
+  &.color-gold {
+    box-shadow: inset 0px 0px 5px $gold;
+    &::after {
+      background: $gold;
+    }
+    &::before {
+      background: $gold;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $gold;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+        transition: 1s;
+      }
+    }
+  }
+}
+
+////SLIDE MIDDLE OUT////
+.btn-slide-middle-out {
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    color: #fff;
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 50%;
+    right: 0;
+    width: 100%;
+    height: 0;
+    color: #fff;
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  &.color-green {
+    box-shadow: inset 0px 0px 5px $green;
+    &::after {
+      background: $green;
+    }
+    &::before {
+      background: $green;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $green;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-blue {
+    box-shadow: inset 0px 0px 5px $blue;
+    &::after {
+      background: $blue;
+    }
+    &::before {
+      background: $blue;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $blue;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-red {
+    box-shadow: inset 0px 0px 5px $red;
+    &::after {
+      background: $red;
+    }
+    &::before {
+      background: $red;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $red;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-violet {
+    box-shadow: inset 0px 0px 5px $violet;
+    &::after {
+      background: $violet;
+    }
+    &::before {
+      background: $violet;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $violet;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-yellow {
+    box-shadow: inset 0px 0px 5px $yellow;
+    &::after {
+      background: $yellow;
+    }
+    &::before {
+      background: $yellow;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $yellow;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-orange {
+    box-shadow: inset 0px 0px 5px $orange;
+    &::after {
+      background: $orange;
+    }
+    &::before {
+      background: $orange;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $orange;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-pink {
+    box-shadow: inset 0px 0px 5px $pink;
+    &::after {
+      background: $pink;
+    }
+    &::before {
+      background: $pink;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $pink;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-brown {
+    box-shadow: inset 0px 0px 5px $brown;
+    &::after {
+      background: $brown;
+    }
+    &::before {
+      background: $brown;
+    }
+    &:hover {
+      color: $white;
+      box-shadow: 0px 0px 5px $brown;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-red {
+    box-shadow: inset 0px 0px 5px $white;
+    &::after {
+      background: $white;
+    }
+    &::before {
+      background: $white;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $white;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-black {
+    box-shadow: inset 0px 0px 5px $black;
+    &::after {
+      background: $black;
+    }
+    &::before {
+      background: $black;
+    }
+    &:hover {
+      color: $white;
+      box-shadow: 0px 0px 5px $black;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-silver {
+    box-shadow: inset 0px 0px 5px $silver;
+    &::after {
+      background: $silver;
+    }
+    &::before {
+      background: $silver;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $silver;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-gold {
+    box-shadow: inset 0px 0px 5px $gold;
+    &::after {
+      background: $gold;
+    }
+    &::before {
+      background: $gold;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $gold;
+      &::after {
+        height: 50%;
+      }
+      &::before {
+        height: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+}
+
+////SLIDE CENTER IN////
+.btn-slide-center-in {
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #fff;
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    color: #fff;
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  &.color-green {
+    box-shadow: inset 0px 0px 5px $green;
+    &::after {
+      background: $green;
+    }
+    &::before {
+      background: $green;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $green;
+      &::after {
+        width: 50%;
+      }
+      &::before {
+        width: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+}
+
+////SLIDE CENTER OUT////
+.btn-slide-center-out {
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    color: #fff;
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 100%;
+    color: #fff;
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  &.color-green {
+    box-shadow: inset 0px 0px 5px $green;
+    &::after {
+      background: $green;
+    }
+    &::before {
+      background: $green;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $green;
+      &::after {
+        width: 50%;
+      }
+      &::before {
+        width: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-blue {
+    box-shadow: inset 0px 0px 5px $blue;
+    &::after {
+      background: $blue;
+    }
+    &::before {
+      background: $blue;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $blue;
+      &::after {
+        width: 50%;
+      }
+      &::before {
+        width: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-red {
+    box-shadow: inset 0px 0px 5px $red;
+    &::after {
+      background: $red;
+    }
+    &::before {
+      background: $red;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $red;
+      &::after {
+        width: 50%;
+      }
+      &::before {
+        width: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-violet {
+    box-shadow: inset 0px 0px 5px $violet;
+    &::after {
+      background: $violet;
+    }
+    &::before {
+      background: $violet;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $violet;
+      &::after {
+        width: 50%;
+      }
+      &::before {
+        width: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-yellow {
+    box-shadow: inset 0px 0px 5px $yellow;
+    &::after {
+      background: $yellow;
+    }
+    &::before {
+      background: $yellow;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $yellow;
+      &::after {
+        width: 50%;
+      }
+      &::before {
+        width: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-orange {
+    box-shadow: inset 0px 0px 5px $orange;
+    &::after {
+      background: $orange;
+    }
+    &::before {
+      background: $orange;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $orange;
+      &::after {
+        width: 50%;
+      }
+      &::before {
+        width: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-pink {
+    box-shadow: inset 0px 0px 5px $pink;
+    &::after {
+      background: $pink;
+    }
+    &::before {
+      background: $pink;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $pink;
+      &::after {
+        width: 50%;
+      }
+      &::before {
+        width: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-brown {
+    box-shadow: inset 0px 0px 5px $brown;
+    &::after {
+      background: $brown;
+    }
+    &::before {
+      background: $brown;
+    }
+    &:hover {
+      color: $white;
+      box-shadow: 0px 0px 5px $brown;
+      &::after {
+        width: 50%;
+      }
+      &::before {
+        width: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-white {
+    box-shadow: inset 0px 0px 5px $white;
+    &::after {
+      background: $white;
+    }
+    &::before {
+      background: $white;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $white;
+      &::after {
+        width: 50%;
+      }
+      &::before {
+        width: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-black {
+    box-shadow: inset 0px 0px 5px $black;
+    &::after {
+      background: $black;
+    }
+    &::before {
+      background: $black;
+    }
+    &:hover {
+      color: $white;
+      box-shadow: 0px 0px 5px $black;
+      &::after {
+        width: 50%;
+      }
+      &::before {
+        width: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-silver {
+    box-shadow: inset 0px 0px 5px $silver;
+    &::after {
+      background: $silver;
+    }
+    &::before {
+      background: $silver;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $silver;
+      &::after {
+        width: 50%;
+      }
+      &::before {
+        width: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-gold {
+    box-shadow: inset 0px 0px 5px $gold;
+    &::after {
+      background: $gold;
+    }
+    &::before {
+      background: $gold;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $gold;
+      &::after {
+        width: 50%;
+      }
+      &::before {
+        width: 50%;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+}
+
+////SLIDE CIRCLE////
+.btn-slide-circle {
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  overflow: hidden;
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    color: #fff;
+    transition: all 1s;
+    border-radius: 100%;
+    z-index: -1;
+  }
+  &.color-green {
+    box-shadow: inset 0px 0px 5px $green;
+    &::after {
+      background: $green;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $green;
+      &::after {
+        height: 300px;
+        width: 300px;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-blue {
+    box-shadow: inset 0px 0px 5px $blue;
+    &::after {
+      background: $blue;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $blue;
+      &::after {
+        height: 300px;
+        width: 300px;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-red {
+    box-shadow: inset 0px 0px 5px $red;
+    &::after {
+      background: $red;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $red;
+      &::after {
+        height: 300px;
+        width: 300px;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-violet {
+    box-shadow: inset 0px 0px 5px $violet;
+    &::after {
+      background: $violet;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $violet;
+      &::after {
+        height: 300px;
+        width: 300px;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-yellow {
+    box-shadow: inset 0px 0px 5px $yellow;
+    &::after {
+      background: $yellow;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $yellow;
+      &::after {
+        height: 300px;
+        width: 300px;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-orange {
+    box-shadow: inset 0px 0px 5px $orange;
+    &::after {
+      background: $orange;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $orange;
+      &::after {
+        height: 300px;
+        width: 300px;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-pink {
+    box-shadow: inset 0px 0px 5px $pink;
+    &::after {
+      background: $pink;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $pink;
+      &::after {
+        height: 300px;
+        width: 300px;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-brown {
+    box-shadow: inset 0px 0px 5px $brown;
+    &::after {
+      background: $brown;
+    }
+    &:hover {
+      color: $white;
+      box-shadow: 0px 0px 5px $brown;
+      &::after {
+        height: 300px;
+        width: 300px;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-white {
+    box-shadow: inset 0px 0px 5px $white;
+    &::after {
+      background: $white;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $white;
+      &::after {
+        height: 300px;
+        width: 300px;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-black {
+    box-shadow: inset 0px 0px 5px $black;
+    &::after {
+      background: $black;
+    }
+    &:hover {
+      color: $white;
+      box-shadow: 0px 0px 5px $black;
+      &::after {
+        height: 300px;
+        width: 300px;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-silver {
+    box-shadow: inset 0px 0px 5px $silver;
+    &::after {
+      background: $silver;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $silver;
+      &::after {
+        height: 300px;
+        width: 300px;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+
+  &.color-gold {
+    box-shadow: inset 0px 0px 5px $gold;
+    &::after {
+      background: $gold;
+    }
+    &:hover {
+      color: $black;
+      box-shadow: 0px 0px 5px $gold;
+      &::after {
+        height: 300px;
+        width: 300px;
+      }
+      & span {
+        color: inherit;
+      }
+    }
+  }
+}
+
+span {
+  z-index: 2;
+  position: relative;
+  color: $green;
+  font-size: 20px;
+}
+span:hover {
+  color: $black;
+}
