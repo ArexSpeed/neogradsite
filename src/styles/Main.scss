@@ -1,0 +1,77 @@
+.hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  border: none;
+  border-radius: 0 0 0 500px;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #33bebe;
+    z-index: -1;
+  }
+  &-img{
+    width: 50%;
+    height: 500px;
+    margin: 20px;
+    background: #555;
+  }
+  &-buttons{
+    display: flex;
+    flex-direction: row;
+  }
+  & button{
+    margin: 5px;
+  }
+}
+
+.info{
+  height: 400px;
+  background: #33bebe;
+  border-radius: 0 500px 0 500px;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+  }
+}
+
+.builder{
+  height: 600px;
+  background: #fff;
+  border-radius: 0 500px 0 500px;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #33bebe;
+    z-index: -1;
+  }
+}
+.example{
+  height: 600px;
+  background: #fff;
+  border-radius: 500px 0 500px 0;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #33bebe;
+    z-index: -1;
+  }
+}
