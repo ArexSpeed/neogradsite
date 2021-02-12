@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import {BrowederRouter as Router, Route, Switch} from 'react-router-dom'
 import './App.css';
+import Build from './components/Build';
+import Docs from './components/Docs';
+import Main from './components/Main';
+import Nav from './components/Nav';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Router>
+        <Switch>
+          <Route exact path='\' component={Main} />
+          <Route exact path='\build' component={Build} />
+          <Route exact path='\docs' component={Docs} />  
+        </Switch>
+      </Router>
+        
     </div>
   );
 }
