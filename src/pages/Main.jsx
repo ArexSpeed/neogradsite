@@ -14,7 +14,7 @@ const Main = () => {
         </div>
       </section>
       <section className="info">
-          <h1 className="section-title">Change your buttons just with class name</h1>
+          
           <ButtonChanger />
       </section>
 

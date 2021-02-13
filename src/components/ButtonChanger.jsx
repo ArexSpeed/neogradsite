@@ -31,16 +31,20 @@ const ButtonChanger = () => {
     const intervalId = setInterval(() => {
 
       shapeChange()
-    }, 2000);
+    }, 3000);
 
     return () => clearInterval(intervalId);
   }, [shapeChange]);
   return (
-    <div>
-      Hello
-      <div>Button: {`<button class="btn btn${shape}${size} btn-round${radiusType}${radiusSize} btn${type} color${color}">Button</button>`}</div>
-      Shape: {shape}
-    </div>
+    <>
+    <div className="btn-info-top">
+      <h1 className="section-title">Change your buttons just with class name</h1>
+      <div className="btn-code">{`<button class="btn btn${shape}${size} btn-round${radiusSize}${radiusType} btn${type} color${color}">Button</button>`}</div>
+      </div>
+      <div className="btn-show">
+      <button className={`btn btn${shape}${size} btn-round${radiusSize}${radiusType} btn${type} color${color}`}>Button</button>
+      </div>
+    </>
   )
 }
 

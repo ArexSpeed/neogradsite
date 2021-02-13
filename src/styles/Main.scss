@@ -37,6 +37,9 @@
   padding: 20px;
 }
 .info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 400px;
   background: #33bebe;
   border-radius: 0 500px 0 500px;
@@ -78,4 +81,24 @@
     background: #33bebe;
     z-index: -1;
   }
+}
+
+// BTN CHANGER
+.btn-info-top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-code{
+  height: 40px;
+  width: 700px;
+  border-radius: 10px;
+  background: #555;
+  color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
+
+}
+.btn-show{
+  margin: 20px;
 }
