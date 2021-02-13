@@ -10,6 +10,7 @@ const Builder = () => {
   const [radiusTypeChose, setRadiusTypeChose] = useState('')
   const [typeChose, setTypeChose] = useState('')
   const [colorChose, setColorChose] = useState('')
+  const [secondColorChose, setSecondColorChose] = useState('')
 
   const showShapes = shapes.map((shape) => (
     <button
@@ -31,7 +32,7 @@ const Builder = () => {
 
   const showRadiusSize = radiusSizes.map((rs) => (
     <button
-      className={`btn btn${shapeChose}${sizeChose} btn-round${rs.class} btn-solid color-blue`}
+      className={`btn btn${shapeChose}${sizeChose} ${rs.class} btn-solid color-blue`}
       onClick={() => setRadiusSizeChose(rs.class)}
     >
       {rs.name}
@@ -40,30 +41,47 @@ const Builder = () => {
 
   const showRadiusType = radius.map((rt) => (
     <button
-      className={`btn btn${shapeChose}${sizeChose} btn-round${radiusSizeChose}${rt.class} btn-solid color-blue`}
+      className={`btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${rt.class} btn-solid color-blue`}
       onClick={() => setRadiusTypeChose(rt.class)}
     >
       {rt.name}
     </button>
   ));
 
+
+  const showColors = colors.map((color) => (
+    <button
+      className={`btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${radiusTypeChose} btn-solid color${color.class}`}
+      onClick={() => setColorChose(color.class)}
+    >
+      {color.name}
+    </button>
+  ));
+
+  const showSecondColors = colors.map((color) => (
+    <button
+      className={`btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${radiusTypeChose} btn-solid color${colorChose}${color.class}`}
+      onClick={() => setSecondColorChose(color.class)}
+    >
+      {color.name}
+    </button>
+  ));
+
   const showTypes = types.map((type) => (
     <button
-      className={`btn btn${shapeChose}${sizeChose} btn-round${radiusSizeChose}${radiusTypeChose} btn${type.class} color-blue`}
+      className={`btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${radiusTypeChose} btn${type.class} color${colorChose}${secondColorChose}`}
       onClick={() => setTypeChose(type.class)}
     >
       {type.name}
     </button>
   ));
 
-  const showColors = colors.map((color) => (
-    <button
-      className={`btn btn${shapeChose}${sizeChose} btn-round${radiusSizeChose}${radiusTypeChose} btn${typeChose} color${color.class}`}
-      onClick={() => setColorChose(color.class)}
-    >
-      {color.name}
-    </button>
-  ));
+const showButton =   ( 
+<button
+className={`btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${radiusTypeChose} btn${typeChose} color${colorChose}${secondColorChose}`}
+>
+Button
+</button>)
 
   return (
     <div>
@@ -71,9 +89,34 @@ const Builder = () => {
       {typeChose &&
       (
       <>
-      <h2 style={{color: '#fff'}}>Colors</h2> 
+      <h2 style={{color: '#fff'}}>Your button:</h2> 
+      <div className="builder-box" style={{display: 'flex', flexDirection: 'column' ,justifyContent: 'center', alignItems: 'center'}}>
+       <div className="btn-code"> {`<button class="btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${radiusTypeChose} btn${typeChose} color${colorChose}${secondColorChose}">Button</button>`}
+       </div>
+        {showButton}
+      </div>
+      </>
+      )
+      }
+
+      {colorChose &&
+      (
+      <>
+      <h2 style={{color: '#fff'}}>Types</h2> 
       <div className="builder-box">
-      {showColors}
+      {showTypes}
+      </div>
+      </>
+      )
+      }
+
+
+      {colorChose && 
+      (
+      <>
+      <h2 style={{color: '#fff'}}>Second color</h2>
+      <div className="builder-box">
+      {showSecondColors}
       </div>
       </>
       )
@@ -82,9 +125,9 @@ const Builder = () => {
       {radiusTypeChose && 
       (
       <>
-      <h2 style={{color: '#fff'}}>Types</h2>
+      <h2 style={{color: '#fff'}}>Colors</h2>
       <div className="builder-box">
-      {showTypes}
+      {showColors}
       </div>
       </>
       )

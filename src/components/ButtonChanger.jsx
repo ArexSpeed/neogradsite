@@ -39,10 +39,10 @@ const ButtonChanger = () => {
     <>
     <div className="btn-info-top">
       <h1 className="section-title">Change your buttons just with class name</h1>
-      <div className="btn-code">{`<button class="btn btn${shape}${size} btn-round${radiusSize}${radiusType} btn${type} color${color}">Button</button>`}</div>
+      <div className="btn-code">{`<button class="btn btn${shape}-5 ${radiusSize}${radiusType} btn${type} color${color}">Button</button>`}</div>
       </div>
       <div className="btn-show">
-      <button className={`btn btn${shape}${size} btn-round${radiusSize}${radiusType} btn${type} color${color}`}>Button</button>
+      <button className={`btn btn${shape}-5 ${radiusSize}${radiusType} btn${type} color${color}`}>Button</button>
       </div>
     </>
   )

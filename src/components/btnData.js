@@ -49,36 +49,44 @@ export const sizes = [
 ]
 export const radiusSizes = [
   {
-    name: 'Mini',
-    class: '-1'
+    name: '0px',
+    class: ' '
   },
   {
-    name: 'Little',
-    class: '-2'
+    name: '2px',
+    class: 'btn-round-1'
   },
   {
-    name: 'Small',
-    class: '-3'
+    name: '5px',
+    class: 'btn-round-2'
   },
   {
-    name: 'Medium',
-    class: '-4'
+    name: '10px',
+    class: 'btn-round-3'
   },
   {
-    name: 'Big',
-    class: '-5'
+    name: '20px',
+    class: 'btn-round-4'
   },
   {
-    name: 'Large',
-    class: '-6'
+    name: '50px',
+    class: 'btn-round-5'
   },
   {
-    name: 'Huge',
-    class: '-7'
+    name: '75px',
+    class: 'btn-round-6'
+  },
+  {
+    name: '100px',
+    class: 'btn-round-7'
   },
 ]
 
 export const radius = [
+  {
+    name: 'Normal',
+    class: ' '
+  },
   {
     name: 'Double 1',
     class: '-double1'
