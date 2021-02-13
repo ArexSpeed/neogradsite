@@ -1,14 +1,53 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 
 const Sidebar = () => {
   return (
     <div>
-      <a href='#getstarted'>Get Started</a>
-      <a href='#shapes'>Shapes</a>
-      <a href='#sizes'>Sizes</a>
-      <a href='#radius'>Radius</a>
-      
+    <ul>
+
+     <li>
+        <a href='#getstarted'>
+        <button className="btn btn-rect-4 btn-border-move color-blue">
+        Get Started
+        </button>
+        </a>
+      </li> 
+      <li>
+        <a href='#shapes'>
+        <button className="btn btn-rect-4 btn-border-move color-blue">
+        Shapes
+        </button>
+        </a>
+      </li> 
+      <li>
+        <a href='#sizes'>
+        <button className="btn btn-rect-4 btn-border-move color-blue">
+        Sizes
+        </button>
+        </a>
+      </li> 
+      <li>
+        <a href='#radius'>
+        <button className="btn btn-rect-4 btn-border-move color-blue">
+         Radius
+        </button>
+        </a>
+      </li> 
+      <li>
+        <a href='#types'>
+        <button className="btn btn-rect-4 btn-border-move color-blue">
+         Types
+        </button>
+        </a>
+      </li> 
+      <li>
+        <a href='#colors'>
+        <button className="btn btn-rect-4 btn-border-move color-blue">
+         Colors
+        </button>
+        </a>
+      </li> 
+      </ul>
     </div>
   )
 }
