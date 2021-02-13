@@ -1,9 +1,9 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import './App.css';
-import Build from './components/Build';
-import Docs from './components/Docs';
-import Main from './components/Main';
-import Nav from './components/Nav';
+import Build from './pages/Build';
+import Docs from './pages/Docs';
+import Main from './pages/Main';
+import Nav from './pages/Nav';
 
 function App() {
   return (
