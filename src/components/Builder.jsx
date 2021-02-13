@@ -31,7 +31,7 @@ const Builder = () => {
 
   const showRadiusSize = radiusSizes.map((rs) => (
     <button
-      className={`btn btn${shapeChose}${sizeChose} btn${rs.class} btn-solid color-blue`}
+      className={`btn btn${shapeChose}${sizeChose} btn-round${rs.class} btn-solid color-blue`}
       onClick={() => setRadiusSizeChose(rs.class)}
     >
       {rs.name}
@@ -40,7 +40,7 @@ const Builder = () => {
 
   const showRadiusType = radius.map((rt) => (
     <button
-      className={`btn btn${shapeChose}${sizeChose} btn${radiusSizeChose}${rt.class} btn-solid color-blue`}
+      className={`btn btn${shapeChose}${sizeChose} btn-round${radiusSizeChose}${rt.class} btn-solid color-blue`}
       onClick={() => setRadiusTypeChose(rt.class)}
     >
       {rt.name}
@@ -49,7 +49,7 @@ const Builder = () => {
 
   const showTypes = types.map((type) => (
     <button
-      className={`btn btn${shapeChose}${sizeChose} btn${radiusSizeChose}${radiusTypeChose} btn${type.class} color-blue`}
+      className={`btn btn${shapeChose}${sizeChose} btn-round${radiusSizeChose}${radiusTypeChose} btn${type.class} color-blue`}
       onClick={() => setTypeChose(type.class)}
     >
       {type.name}
@@ -58,7 +58,7 @@ const Builder = () => {
 
   const showColors = colors.map((color) => (
     <button
-      className={`btn btn${shapeChose}${sizeChose} btn${radiusSizeChose}${radiusTypeChose} btn${typeChose} color${color.class}`}
+      className={`btn btn${shapeChose}${sizeChose} btn-round${radiusSizeChose}${radiusTypeChose} btn${typeChose} color${color.class}`}
       onClick={() => setColorChose(color.class)}
     >
       {color.name}
@@ -68,39 +68,65 @@ const Builder = () => {
   return (
     <div>
 
-      {typeChose && 
+      {typeChose &&
+      (
+      <>
+      <h2 style={{color: '#fff'}}>Colors</h2> 
       <div className="builder-box">
       {showColors}
       </div>
+      </>
+      )
       }
 
       {radiusTypeChose && 
+      (
+      <>
+      <h2 style={{color: '#fff'}}>Types</h2>
       <div className="builder-box">
       {showTypes}
       </div>
+      </>
+      )
       }
 
-      {radiusSizeChose && 
+      {radiusSizeChose && (
+      <>
+      <h2 style={{color: '#fff'}}>Radius Type</h2>
       <div className="builder-box">
       {showRadiusType}
       </div>
+      </>
+      ) 
+
       }
 
-      {sizeChose && 
-      <div className="builder-box">
-      {showRadiusSize}
-      </div>
+      {sizeChose && (
+        <>
+        <h2 style={{color: '#fff'}}>Radius</h2>
+        <div className="builder-box">
+        {showRadiusSize}
+        </div>
+        </>
+      )
+      
       }
 
-      {shapeChose && 
+      {shapeChose && (
+      <>
+      <h2 style={{color: '#fff'}}>Sizes</h2>
       <div className="builder-box">
       {showSizes}
       </div>
+      </>)
       }
 
+      <>
+      <h2 style={{color: '#fff'}}>Shapes</h2>
       <div className="builder-box">
       {showShapes}
       </div>
+      </>
       
     </div>
   )
