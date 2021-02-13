@@ -3,7 +3,7 @@ import {shapes, sizes, radiusSizes, radius, types, colors} from './btnData';
 
 
 const Builder = () => {
-  const [text, setText] = useState('Text')
+  const [colorBg, setColorBg] = useState('#fff')
   const [shapeChose, setShapeChose] = useState('')
   const [sizeChose, setSizeChose] = useState('')
   const [radiusSizeChose, setRadiusSizeChose] = useState('')
@@ -85,12 +85,15 @@ Button
 
   return (
     <div>
+      <h2 style={{color: '#fff'}}>Change your background:</h2> 
+      <input type='color' onChange={(e) => setColorBg(e.target.value)} />
+
 
       {typeChose &&
       (
       <>
       <h2 style={{color: '#fff'}}>Your button:</h2> 
-      <div className="builder-box" style={{display: 'flex', flexDirection: 'column' ,justifyContent: 'center', alignItems: 'center'}}>
+      <div className="builder-box" style={{backgroundColor: `${colorBg}` ,display: 'flex', flexDirection: 'column' ,justifyContent: 'center', alignItems: 'center'}}>
        <div className="btn-code"> {`<button class="btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${radiusTypeChose} btn${typeChose} color${colorChose}${secondColorChose}">Button</button>`}
        </div>
         {showButton}
@@ -103,7 +106,7 @@ Button
       (
       <>
       <h2 style={{color: '#fff'}}>Types</h2> 
-      <div className="builder-box">
+      <div className="builder-box" style={{backgroundColor: `${colorBg}`}}>
       {showTypes}
       </div>
       </>
@@ -115,7 +118,7 @@ Button
       (
       <>
       <h2 style={{color: '#fff'}}>Second color</h2>
-      <div className="builder-box">
+      <div className="builder-box" style={{backgroundColor: `${colorBg}`}}>
       {showSecondColors}
       </div>
       </>
@@ -126,7 +129,7 @@ Button
       (
       <>
       <h2 style={{color: '#fff'}}>Colors</h2>
-      <div className="builder-box">
+      <div className="builder-box" style={{backgroundColor: `${colorBg}`}}>
       {showColors}
       </div>
       </>
@@ -136,7 +139,7 @@ Button
       {radiusSizeChose && (
       <>
       <h2 style={{color: '#fff'}}>Radius Type</h2>
-      <div className="builder-box">
+      <div className="builder-box" style={{backgroundColor: `${colorBg}`}}>
       {showRadiusType}
       </div>
       </>
@@ -147,7 +150,7 @@ Button
       {sizeChose && (
         <>
         <h2 style={{color: '#fff'}}>Radius</h2>
-        <div className="builder-box">
+        <div className="builder-box" style={{backgroundColor: `${colorBg}`}}>
         {showRadiusSize}
         </div>
         </>
@@ -158,7 +161,7 @@ Button
       {shapeChose && (
       <>
       <h2 style={{color: '#fff'}}>Sizes</h2>
-      <div className="builder-box">
+      <div className="builder-box" style={{backgroundColor: `${colorBg}`}}>
       {showSizes}
       </div>
       </>)
@@ -166,7 +169,7 @@ Button
 
       <>
       <h2 style={{color: '#fff'}}>Shapes</h2>
-      <div className="builder-box">
+      <div className="builder-box" style={{backgroundColor: `${colorBg}`}}>
       {showShapes}
       </div>
       </>
