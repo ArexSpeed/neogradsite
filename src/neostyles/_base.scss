@@ -187,6 +187,12 @@
     &-bottom {
       border-radius: 0 0 2px 2px;
     }
+    &-left {
+      border-radius: 2px 0 0 2px;
+    }
+    &-right {
+      border-radius: 0 2px 2px 0;
+    }
     &-corner1 {
       border-radius: 2px 0 0 0;
     }
@@ -213,6 +219,12 @@
     }
     &-bottom {
       border-radius: 0 0 5px 5px;
+    }
+    &-left {
+      border-radius: 5px 0 0 5px;
+    }
+    &-right {
+      border-radius: 0 5px 5px 0;
     }
     &-corner1 {
       border-radius: 5px 0 0 0;
@@ -241,6 +253,12 @@
     &-bottom {
       border-radius: 0 0 10px 10px;
     }
+    &-left {
+      border-radius: 10px 0 0 10px;
+    }
+    &-right {
+      border-radius: 0 10px 10px 0;
+    }
     &-corner1 {
       border-radius: 10px 0 0 0;
     }
@@ -267,6 +285,12 @@
     }
     &-bottom {
       border-radius: 0 0 20px 20px;
+    }
+    &-left {
+      border-radius: 20px 0 0 20px;
+    }
+    &-right {
+      border-radius: 0 20px 20px 0;
     }
     &-corner1 {
       border-radius: 20px 0 0 0;
@@ -295,6 +319,12 @@
     &-bottom {
       border-radius: 0 0 50px 50px;
     }
+    &-left {
+      border-radius: 50px 0 0 50px;
+    }
+    &-right {
+      border-radius: 0 50px 50px 0;
+    }
     &-corner1 {
       border-radius: 50px 0 0 0;
     }
@@ -322,6 +352,12 @@
     &-bottom {
       border-radius: 0 0 75px 75px;
     }
+    &-left {
+      border-radius: 75px 0 0 75px;
+    }
+    &-right {
+      border-radius: 0 75px 75px 0;
+    }
     &-corner1 {
       border-radius: 75px 0 0 0;
     }
@@ -344,22 +380,28 @@
       border-radius: 0 100px 0 100px;
     }
     &-top {
-      border-radius: 75px 75px 0 0;
+      border-radius: 100px 100px 0 0;
     }
     &-bottom {
-      border-radius: 0 0 75px 75px;
+      border-radius: 0 0 100px 100px;
+    }
+    &-left {
+      border-radius: 100px 0 0 100px;
+    }
+    &-right {
+      border-radius: 0 100px 100px 0;
     }
     &-corner1 {
-      border-radius: 75px 0 0 0;
+      border-radius: 100px 0 0 0;
     }
     &-corner2 {
-      border-radius: 0 75px 0 0;
+      border-radius: 0 100px 0 0;
     }
     &-corner3 {
-      border-radius: 0 0 75px 0;
+      border-radius: 0 0 100px 0;
     }
     &-corner4 {
-      border-radius: 0 0 0 75px;
+      border-radius: 0 0 0 100px;
     }
   }
 }

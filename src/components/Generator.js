@@ -34,40 +34,43 @@ const Generator = ({shape, size, radiusSize, radiusType, type, color, secondColo
       break;
   }
 
-  switch(radiusType){
-    case 'Normal':
-      radiusCode = `border-radius: ${radiusSize};`
+  switch (radiusType) {
+    case "Normal":
+      radiusCode = `border-radius: ${radiusSize};`;
       break;
-    case 'Double1':
-      radiusCode = `border-radius: ${radiusSize} 0 ${radiusSize} 0;`
+    case "Double1":
+      radiusCode = `border-radius: ${radiusSize} 0 ${radiusSize} 0;`;
       break;
-    case 'Double2':
-      radiusCode = `border-radius: 0 ${radiusSize} 0 ${radiusSize};`
+    case "Double2":
+      radiusCode = `border-radius: 0 ${radiusSize} 0 ${radiusSize};`;
       break;
-    case 'Top':
-      radiusCode = `border-radius: ${radiusSize} ${radiusSize} 0 0;`
+    case "Top":
+      radiusCode = `border-radius: ${radiusSize} ${radiusSize} 0 0;`;
       break;
-    case 'Bottom':
-      radiusCode = `border-radius: 0 0 ${radiusSize} ${radiusSize};`
+    case "Bottom":
+      radiusCode = `border-radius: 0 0 ${radiusSize} ${radiusSize};`;
       break;
-    case 'Corner1':
-      radiusCode = `border-radius: ${radiusSize} 0 0 0;;`
-    break;
-    case 'Corner2':
-      radiusCode = `border-radius: 0 ${radiusSize} 0 0;`
+    case "Left":
+      radiusCode = `border-radius: ${radiusSize} 0 0 ${radiusSize};`;
       break;
-    case 'Corner3':
-      radiusCode = `border-radius: 0 0 ${radiusSize} 0;`
+    case "Right":
+      radiusCode = `border-radius: 0 ${radiusSize} ${radiusSize} 0;`;
       break;
-    case 'Corner4':
-      radiusCode = `border-radius: 0 0 0 ${radiusSize};`
+    case "Corner1":
+      radiusCode = `border-radius: ${radiusSize} 0 0 0;;`;
+      break;
+    case "Corner2":
+      radiusCode = `border-radius: 0 ${radiusSize} 0 0;`;
+      break;
+    case "Corner3":
+      radiusCode = `border-radius: 0 0 ${radiusSize} 0;`;
+      break;
+    case "Corner4":
+      radiusCode = `border-radius: 0 0 0 ${radiusSize};`;
       break;
     default:
-      radiusCode = ''
+      radiusCode = "";
       break;
-  }
-  if(radiusType === 'Double 1'){
-    radiusCode = `border-radius: ${radiusSize} 0 ${radiusSize} 0;`
   }
 
   return (

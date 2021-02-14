@@ -104,6 +104,14 @@ export const radius = [
     class: '-bottom'
   },
   {
+    name: 'Left',
+    class: '-left'
+  },
+  {
+    name: 'Right',
+    class: '-right'
+  },
+  {
     name: 'Corner1',
     class: '-corner1'
   },
