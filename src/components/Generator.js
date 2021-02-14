@@ -216,8 +216,348 @@ if(type === '-grad' && secondColor){
   }
   `
 }
-
-
+if(type === '-grad-radial' && !secondColor){
+  typeCode = `
+  color: ${colorText};
+  background: radial-gradient(${lighten}, ${darken});
+  border: none;
+  transition: all 200ms ease-in-out;
+  }
+  .button:hover{
+    background: radial-gradient(${lighten}, ${darken});
+  }
+  `
+}
+if(type === '-grad-radial' && secondColor){
+  typeCode = `
+  color: ${colorText};
+  background: radial-gradient(${color}, ${secondColor});
+  border: none;
+  transition: all 200ms ease-in-out;
+  }
+  .button:hover{
+    background: radial-gradient(${secondColor}, ${color});
+  }
+  `
+}
+if(type === '-solid' && !secondColor){
+  typeCode = `
+  color: ${colorText};
+  border: none;
+  background: ${color};
+  }
+  `
+}
+if(type === '-solid' && secondColor){
+  typeCode = `
+  color: ${colorText};
+  border: none;
+  background: linear-gradient(45deg, ${color}, ${secondColor});
+  }
+  `
+}
+if(type === '-solid-border' && !secondColor){
+  typeCode = `
+  color: ${color};
+  border: 2px groove;
+  background: transparent;
+  border-color: ${color};
+  }
+  `
+}
+if(type === '-solid-border' && secondColor){
+  typeCode = `
+  color: ${color};
+  border: 2px groove;
+  background: transparent;
+  border-color: ${color} ${secondColor};
+  }
+  `
+}
+if(type === '-neon' && !secondColor){
+  typeCode = `
+  color: ${colorText};
+  border: none;
+  transition: box-shadow 400ms;
+  background: ${color};
+  box-shadow: 0 0 10px ${color}, 0 0 10px ${color} inset;
+  }
+  .button:hover{
+    box-shadow: 0 0 5px ${color}, 0 0 25px ${color}, 0 0 50px ${color};
+  }
+  `
+}
+if(type === '-neon' && secondColor){
+  typeCode = `
+  color: ${colorText};
+  border: none;
+  transition: box-shadow 400ms;
+  background: linear-gradient(45deg, ${color}, ${secondColor});
+  box-shadow: 0 0 15px ${color}, 0 0 15px 3px ${color} inset;
+  }
+  .button:hover{
+    box-shadow: 0 0 10px ${color}, 0 0 10px 3px ${color} inset;
+  }
+  `
+}
+if(type === '-neon-border' && !secondColor){
+  typeCode = `
+  color: ${color};
+  border: none;
+  transition: box-shadow 400ms;
+  background: transparent;
+  box-shadow: 0 0 10px ${color}, 0 0 10px 3px ${color} inset;
+  }
+  .button:hover{
+    box-shadow: 0 0 15px ${color}, 0 0 15px 3px ${color} inset;
+  }
+  `
+}
+if(type === '-neon-border' && secondColor){
+  typeCode = `
+  color: ${color};
+  border: none;
+  transition: box-shadow 400ms;
+  background: transparent;
+  box-shadow: 0 0 15px ${color}, 0 0 15px 3px ${secondColor} inset;
+  }
+  .button:hover{
+    box-shadow: 0 0 10px ${color}, 0 0 10px 3px ${secondColor} inset;
+  }
+  `
+}
+if(type === '-neon-reflex' && !secondColor){
+  typeCode = `
+  color: ${colorText};
+  border: none;
+  transition: all 400ms;
+  background: ${color};
+  letter-spacing: 4px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  margin: 30px 0;
+  }
+  .button:hover{
+    color: #000;
+    box-shadow: 0 0 5px ${color}, 0 0 25px ${color}, 0 0 50px ${color};
+  }
+  `
+}
+if(type === '-neon-reflex' && secondColor){
+  typeCode = `
+  color: ${colorText};
+  border: none;
+  transition: all 400ms;
+  background: linear-gradient(45deg, ${color}, ${secondColor});
+  letter-spacing: 4px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  margin: 30px 0;
+  }
+  .button:hover{
+    color: #000;
+    box-shadow: 0 0 5px ${color}, 0 0 25px ${color}, 0 0 50px ${color},
+              0 0 5px ${secondColor}, 0 0 25px ${secondColor}, 0 0 50px ${secondColor};
+  }
+  `
+}
+if(type === '-border-move' && !secondColor){
+  typeCode = `
+  color: ${color};
+  position: relative;
+  padding: 10px 30px;
+  margin: 0 15px;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  overflow: hidden;
+  }
+  .button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid ${color};
+    border-left: 2px solid ${color};
+    border-radius: inherit;
+    transition: 0.5s;
+  }
+  .button::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid ${color};
+    border-right: 2px solid ${color};
+    border-radius: inherit;
+    transition: 0.5s;
+  }
+  .button:hover::before{
+    width: 100%;
+    height: 100%;
+  }
+  .button:hover::after{
+    width: 100%;
+    height: 100%;
+  }
+  `
+}
+if(type === '-border-move' && secondColor){
+  typeCode = `
+  color: ${color};
+  position: relative;
+  padding: 10px 30px;
+  margin: 0 15px;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  overflow: hidden;
+  }
+  .button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid ${color};
+    border-left: 2px solid ${color};
+    border-radius: inherit;
+    transition: 0.5s;
+  }
+  .button::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid ${secondColor};
+    border-right: 2px solid ${secondColor};
+    border-radius: inherit;
+    transition: 0.5s;
+  }
+  .button:hover::before{
+    width: 100%;
+    height: 100%;
+  }
+  .button:hover::after{
+    width: 100%;
+    height: 100%;
+  }
+  `
+}
+if(type === '-border-move-light' && !secondColor){
+  typeCode = `
+  position: relative;
+  padding: 10px 30px;
+  margin: 0 15px;
+  color: ${color};
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  overflow: hidden;
+  }
+  .button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-color: ${color};
+    border-radius: inherit;
+    transition: 0.5s;
+  }
+  .button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    border-color: ${color};
+    border-radius: inherit;
+    transition: 0.5s;
+  }
+  .button:hover{
+    background: ${color};
+    box-shadow: 0 0 20px $val;
+    border: none;
+    transition-delay: 0.5s;
+    color: ${colorText}
+  }
+  .button:hover:before {
+    width: 100%;
+    height: 100%;
+  }
+  .button:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+  `
+}
+if(type === '-border-move-light' && secondColor){
+  typeCode = `
+  position: relative;
+  padding: 10px 30px;
+  margin: 0 15px;
+  color: ${color};
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  }
+  .button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-color: ${color};
+    border-radius: inherit;
+    transition: 0.5s;
+  }
+  .button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    border-color: ${secondColor};
+    border-radius: inherit;
+    transition: 0.5s;
+  }
+  .button:hover{
+    background: ${color};
+    box-shadow: -10px -10px 20px ${color}, 10px 10px 20px ${secondColor};
+    border: none;
+    transition-delay: 0.5s;
+    color: ${colorText}
+  }
+  .button:hover:before {
+    width: 100%;
+    height: 100%;
+  }
+  .button:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+  `
+}
 
   return (
     <div>
