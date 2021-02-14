@@ -1,7 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {rectSizes, longRectSizes, squareSizes, circleSizes} from './gData'
 
 const Generator = ({shape, size, radiusSize, radiusType, type, color, secondColor}) => {
+
+  const [copySuccess, setCopySuccess] = useState('');
+  const copyToClipboard = async copyMe => {
+    try {
+      await navigator.clipboard.writeText(copyMe);
+      setCopySuccess('Copied!');
+    } catch (err) {
+      setCopySuccess('Failed to copy!');
+    }
+  };
 
   let beginCode = `.button {`
   let sizeCode;
@@ -141,10 +151,42 @@ if(type === '-neograd' && secondColor){
   }
   `
 }
+if(type === '-neograd-r' && !secondColor){
+  typeCode = `
+  background: transparent;
+  box-shadow: 0 0 10px 0 ${color} inset, 0 0 10px 0px ${color};
+  border-color: ${color};
+  color: ${color};
+  }
+  .button:hover{
+    color: ${colorText};
+    background: linear-gradient( 60deg, lighten(${color}, 10%), darken(${color}, 10%));
+    box-shadow: 1px 1px 40px ${color} inset;
+    transition: all 400ms ease-in-out;
+  }
+  `
+}
+if(type === '-neograd-r' && secondColor){
+  typeCode = `
+  transition: all 400ms ease-in-out;
+  text-align: center;
+  border: none;
+  background: linear-gradient(60deg, ${color}, ${secondColor});
+  box-shadow: 1px 1px 40px ${color} inset;
+  }
+  .button:hover {
+    color: ${colorText};
+    box-shadow: 0 0 10px 0 ${color} inset, 0 0 10px 3px ${secondColor};
+    background: transparent;
+  }
+  `
+}
+
 
   return (
     <div>
-        {beginCode + sizeCode + radiusCode + typeCode}
+        <div className="code-gen">{beginCode + sizeCode + radiusCode + typeCode}</div>
+        <button onClick={() => copyToClipboard(`${beginCode} ${sizeCode} ${radiusCode} ${typeCode}`)}>Copy</button>
     </div>
   )
 }
