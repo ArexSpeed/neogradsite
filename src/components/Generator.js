@@ -9,6 +9,10 @@ const Generator = ({shape, size, radiusSize, radiusType, type, color, secondColo
   let typeCode;
   let typeCode2;
 
+  //change color text in types
+  const colorText = color === '#202124' || color === '#000000' || 
+  color === '#3c4043' || color === '#2c2c2c' || color === '#a52a2a' || color === '#442424' ? '#fff' : '#000';
+
   switch(shape){
     case '-rect':
       sizeCode = `width: ${rectSizes[Number(size.slice(1))].width};
@@ -78,7 +82,7 @@ const Generator = ({shape, size, radiusSize, radiusType, type, color, secondColo
 
 if(type === '-normal' && !secondColor) {
   typeCode = `
-      color: #000;
+      color: ${colorText};
       text-align: center;
       border: none;
       transition: all 0.35s ease-in-out;
@@ -93,7 +97,7 @@ if(type === '-normal' && !secondColor) {
 }
 if(type === '-normal' && secondColor){
   typeCode = `
-      color: #000;
+      color: ${colorText};
       text-align: center;
       border: none;
       transition: all 0.35s ease-in-out;
@@ -108,7 +112,7 @@ if(type === '-normal' && secondColor){
 }
 if(type === '-neograd' && !secondColor){
   typeCode = `
-  color: #000;
+  color: ${colorText};
   transition: all 400ms ease-in-out;
   text-align: center;
   border: none;
@@ -124,7 +128,7 @@ if(type === '-neograd' && !secondColor){
 }
 if(type === '-neograd' && secondColor){
   typeCode = `
-  color: #000;
+  color: ${colorText};
   transition: all 400ms ease-in-out;
   text-align: center;
   border: none;
