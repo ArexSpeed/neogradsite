@@ -88,7 +88,7 @@ export const radius = [
     class: ' '
   },
   {
-    name: 'Double 1',
+    name: 'Double1',
     class: '-double1'
   },
   {

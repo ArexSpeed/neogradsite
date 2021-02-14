@@ -9,6 +9,8 @@ const Builder = () => {
   const [sizeChose, setSizeChose] = useState('')
   const [radiusSizeChose, setRadiusSizeChose] = useState('')
   const [radiusTypeChose, setRadiusTypeChose] = useState('')
+  const [radiusSizeName, setRadiusSizeName] = useState('') //to generator
+  const [radiusTypeName, setRadiusTypeName] = useState('') //to generator
   const [typeChose, setTypeChose] = useState('')
   const [colorChose, setColorChose] = useState('')
   const [secondColorChose, setSecondColorChose] = useState('')
@@ -34,7 +36,7 @@ const Builder = () => {
   const showRadiusSize = radiusSizes.map((rs) => (
     <button
       className={`btn btn${shapeChose}${sizeChose} ${rs.class} btn-solid color-blue`}
-      onClick={() => setRadiusSizeChose(rs.class)}
+      onClick={() => {setRadiusSizeChose(rs.class); setRadiusSizeName(rs.name)}}
     >
       {rs.name}
     </button>
@@ -43,7 +45,7 @@ const Builder = () => {
   const showRadiusType = radius.map((rt) => (
     <button
       className={`btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${rt.class} btn-solid color-blue`}
-      onClick={() => setRadiusTypeChose(rt.class)}
+      onClick={() => {setRadiusTypeChose(rt.class); setRadiusTypeName(rt.name)}}
     >
       {rt.name}
     </button>
@@ -91,7 +93,7 @@ Button
       <input type='color' onChange={(e) => setColorBg(e.target.value)} />
 
       {typeChose && (
-        <Generator shape={shapeChose} size={sizeChose} radiusSize={radiusSizeChose} radiusType={radiusTypeChose} type={typeChose} color={colorChose} secondColor={secondColorChose} />
+        <Generator shape={shapeChose} size={sizeChose} radiusSize={radiusSizeName} radiusType={radiusTypeName} type={typeChose} color={colorChose} secondColor={secondColorChose} />
       )
       }
 
