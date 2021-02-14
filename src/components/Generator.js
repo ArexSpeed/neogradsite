@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {rectSizes, longRectSizes, squareSizes, circleSizes} from './gData'
+import React, {useState, useEffect} from 'react'
+import {rectSizes, longRectSizes, squareSizes, circleSizes, ldColors} from './gData'
 
 const Generator = ({shape, size, radiusSize, radiusType, type, color, secondColor}) => {
 
@@ -17,11 +17,22 @@ const Generator = ({shape, size, radiusSize, radiusType, type, color, secondColo
   let sizeCode;
   let radiusCode;
   let typeCode;
-  let typeCode2;
 
   //change color text in types
   const colorText = color === '#202124' || color === '#000000' || 
   color === '#3c4043' || color === '#2c2c2c' || color === '#a52a2a' || color === '#442424' ? '#fff' : '#000';
+
+  const [lighten, setLighten] = useState('')
+  const [darken, setDarken] = useState('')
+  //lighten, darken for gradient background
+  useEffect(() => {
+    ldColors.filter(item => item.base === color).map(item => setLighten(item.lighten))
+    ldColors.filter(item => item.base === color).map(item => setDarken(item.darken))
+    
+  }, [color])
+
+  console.log('lighten: ', lighten, 'darken: ', darken)
+
 
   switch(shape){
     case '-rect':
@@ -126,7 +137,7 @@ if(type === '-neograd' && !secondColor){
   transition: all 400ms ease-in-out;
   text-align: center;
   border: none;
-  background: linear-gradient(10deg, lighten(${color}, 10%), darken(${color}, 10%));
+  background: linear-gradient(10deg, ${lighten}, ${darken});
   box-shadow: 1px 1px 40px ${color} inset;
   }
   .button:hover {
@@ -160,7 +171,7 @@ if(type === '-neograd-r' && !secondColor){
   }
   .button:hover{
     color: ${colorText};
-    background: linear-gradient( 60deg, lighten(${color}, 10%), darken(${color}, 10%));
+    background: linear-gradient( 60deg, ${lighten}, ${darken});
     box-shadow: 1px 1px 40px ${color} inset;
     transition: all 400ms ease-in-out;
   }
@@ -181,6 +192,31 @@ if(type === '-neograd-r' && secondColor){
   }
   `
 }
+if(type === '-grad' && !secondColor){
+  typeCode = `
+  color: ${colorText};
+  background: linear-gradient(to left, ${lighten}, ${darken});
+  border: none;
+  transition: all 200ms ease-in-out;
+  }
+  .button:hover {
+    box-shadow: inset -3px 3px 10px ${lighten},
+          inset 3px -3px 10px ${darken};
+  }
+  `
+}
+if(type === '-grad' && secondColor){
+  typeCode = `
+  color: ${colorText};
+  background: linear-gradient(45deg, ${color}, ${secondColor});
+  }
+.button:hover {
+  box-shadow: inset -3px 3px 10px ${lighten},
+  inset 3px -3px 10px ${darken};
+  }
+  `
+}
+
 
 
   return (
