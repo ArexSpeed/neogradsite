@@ -228,10 +228,6 @@ export const types = [
     class: '-hide-border'
   },
   {
-    name: 'surround border',
-    class: '-surround-border'
-  },
-  {
     name: 'surround border hover',
     class: '-surround-border-hover'
   },
@@ -246,6 +242,10 @@ export const types = [
 ]
 
 export const colors = [
+  {
+    name: 'no',
+    class: ' ',
+  },
   {
     name: 'green',
     class: '-green',
