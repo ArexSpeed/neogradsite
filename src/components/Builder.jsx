@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import {shapes, sizes, radiusSizes, radius, types, colors} from './btnData';
+import Generator from './Generator';
 
 
 const Builder = () => {
@@ -76,6 +77,7 @@ const Builder = () => {
     </button>
   ));
 
+
 const showButton =   ( 
 <button
 className={`btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${radiusTypeChose} btn${typeChose} color${colorChose}${secondColorChose}`}
@@ -88,6 +90,10 @@ Button
       <h2 style={{color: '#fff'}}>Change your background:</h2> 
       <input type='color' onChange={(e) => setColorBg(e.target.value)} />
 
+      {typeChose && (
+        <Generator shape={shapeChose} size={sizeChose} radiusSize={radiusSizeChose} radiusType={radiusTypeChose} type={typeChose} color={colorChose} secondColor={secondColorChose} />
+      )
+      }
 
       {typeChose &&
       (
