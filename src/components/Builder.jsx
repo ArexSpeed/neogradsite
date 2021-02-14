@@ -9,11 +9,13 @@ const Builder = () => {
   const [sizeChose, setSizeChose] = useState('')
   const [radiusSizeChose, setRadiusSizeChose] = useState('')
   const [radiusTypeChose, setRadiusTypeChose] = useState('')
-  const [radiusSizeName, setRadiusSizeName] = useState('') //to generator
-  const [radiusTypeName, setRadiusTypeName] = useState('') //to generator
   const [typeChose, setTypeChose] = useState('')
   const [colorChose, setColorChose] = useState('')
   const [secondColorChose, setSecondColorChose] = useState('')
+  const [radiusSizeName, setRadiusSizeName] = useState('') //to generator
+  const [radiusTypeName, setRadiusTypeName] = useState('') //to generator
+  const [colorName, setColorName] = useState('')
+  const [secondColorName, setSecondColorName] = useState('')
 
   const showShapes = shapes.map((shape) => (
     <button
@@ -55,7 +57,7 @@ const Builder = () => {
   const showColors = colors.map((color) => (
     <button
       className={`btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${radiusTypeChose} btn-solid color${color.class}`}
-      onClick={() => setColorChose(color.class)}
+      onClick={() => {setColorChose(color.class); setColorName(color.hex)}}
     >
       {color.name}
     </button>
@@ -64,7 +66,7 @@ const Builder = () => {
   const showSecondColors = colors.map((color) => (
     <button
       className={`btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${radiusTypeChose} btn-solid color${colorChose}${color.class}`}
-      onClick={() => setSecondColorChose(color.class)}
+      onClick={() => {setSecondColorChose(color.class); setSecondColorName(color.hex)}}
     >
       {color.name}
     </button>
@@ -93,7 +95,7 @@ Button
       <input type='color' onChange={(e) => setColorBg(e.target.value)} />
 
       {typeChose && (
-        <Generator shape={shapeChose} size={sizeChose} radiusSize={radiusSizeName} radiusType={radiusTypeName} type={typeChose} color={colorChose} secondColor={secondColorChose} />
+        <Generator shape={shapeChose} size={sizeChose} radiusSize={radiusSizeName} radiusType={radiusTypeName} type={typeChose} color={colorName} secondColor={secondColorName} />
       )
       }
 

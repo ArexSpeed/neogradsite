@@ -3,8 +3,11 @@ import {rectSizes, longRectSizes, squareSizes, circleSizes} from './gData'
 
 const Generator = ({shape, size, radiusSize, radiusType, type, color, secondColor}) => {
 
+  let beginCode = `.button {`
   let sizeCode;
   let radiusCode;
+  let typeCode;
+  let typeCode2;
 
   switch(shape){
     case '-rect':
@@ -73,9 +76,71 @@ const Generator = ({shape, size, radiusSize, radiusType, type, color, secondColo
       break;
   }
 
+if(type === '-normal' && !secondColor) {
+  typeCode = `
+      color: #000;
+      text-align: center;
+      border: none;
+      transition: all 0.35s ease-in-out;
+      background: ${color};
+      }
+      .button:hover {
+        background: transparent;
+        color: ${color};
+        transition: all 0.35s ease-in-out;
+      }
+      `
+}
+if(type === '-normal' && secondColor){
+  typeCode = `
+      color: #000;
+      text-align: center;
+      border: none;
+      transition: all 0.35s ease-in-out;
+      background: linear-gradient(60deg, ${color}, ${secondColor});
+      }
+      .button:hover {
+        background: transparent;
+        color: ${color};
+        transition: all 0.35s ease-in-out;
+      }
+      `
+}
+if(type === '-neograd' && !secondColor){
+  typeCode = `
+  color: #000;
+  transition: all 400ms ease-in-out;
+  text-align: center;
+  border: none;
+  background: linear-gradient(10deg, lighten(${color}, 10%), darken(${color}, 10%));
+  box-shadow: 1px 1px 40px ${color} inset;
+  }
+  .button:hover {
+    box-shadow: 0 0 10px 0 ${color} inset, 0 0 10px 3px ${color};
+    background: transparent;
+    color: ${color};
+  }
+  `
+}
+if(type === '-neograd' && secondColor){
+  typeCode = `
+  color: #000;
+  transition: all 400ms ease-in-out;
+  text-align: center;
+  border: none;
+  background: linear-gradient(60deg, ${color}, ${secondColor});
+  box-shadow: 1px 1px 40px ${color} inset;
+}
+  .button:hover {
+    box-shadow: 0 0 10px 0 ${color} inset, 0 0 10px 3px ${secondColor};
+    background: transparent;
+  }
+  `
+}
+
   return (
     <div>
-        {sizeCode + radiusCode}
+        {beginCode + sizeCode + radiusCode + typeCode}
     </div>
   )
 }

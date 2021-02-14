@@ -253,198 +253,247 @@ export const colors = [
   {
     name: 'no',
     class: ' ',
+    hex: '',
   },
   {
     name: 'green',
     class: '-green',
+    hex: '#76ff03',
   },
   {
     name: 'lightgreen',
     class: '-lightgreen',
+    hex: '#b0ff57',
   },
   {
     name: 'darkgreen',
     class: '-darkgreen',
+    hex: '#32cb00',
   },
   {
     name: 'neongreen',
     class: '-neongreen',
+    hex: '#00feca',
   },
   {
     name: 'blue',
     class: '-blue',
+    hex: '#2979ff',
   },
   {
     name: 'lightblue',
     class: '-lightblue',
+    hex: '#75a7ff',
   },
   {
     name: 'darkblue',
     class: '-darkblue',
+    hex: '#004ecb',
   },
   {
     name: 'neonblue',
     class: '-neonblue',
+    hex: '#45f3ff',
   },
   {
     name: 'red',
     class: '-red',
+    hex: '#ff1744',
   },
   {
     name: 'lightred',
     class: '-lightred',
+    hex: '#ff616f',
   },
   {
     name: 'darkred',
     class: '-darkred',
+    hex: '#c4001d',
   },
   {
     name: 'neonred',
     class: '-neonred',
+    hex: '#eb0450',
   },
   {
     name: 'yellow',
     class: '-yellow',
+    hex: '#ffeb3b',
   },
   {
     name: 'lightyellow',
     class: '-lightyellow',
+    hex: '#ffff72',
   },
   {
     name: 'darkyellow',
     class: '-darkyellow',
+    hex: '#c8b900',
   },
   {
     name: 'neonyellow',
     class: '-neonyellow',
+    hex: '#ccff02',
   },
   {
     name: 'orange',
     class: '-orange',
+    hex: '#ff7d00',
   },
   {
     name: 'lightorange',
     class: '-lightorange',
+    hex: '#ff9f00',
   },
   {
     name: 'darkorange',
     class: '-darkorange',
+    hex: '#e55300',
   },
   {
     name: 'neonorange',
     class: '-neonorange',
+    hex: '#ff3c00',
   },
   {
     name: 'violet',
     class: '-violet',
+    hex: '#ab47bc',
   },
   {
     name: 'lightviolet',
     class: '-lightviolet',
+    hex: '#df78ef',
   },
   {
     name: 'darkviolet',
     class: '-darkviolet',
+    hex: '#790e8b',
   },
   {
     name: 'neonviolet',
     class: '-neonviolet',
+    hex: '#6e0dd0',
   },
   {
     name: 'pink',
     class: '-pink',
+    hex: '#ec407a',
   },
   {
     name: 'lightpink',
     class: '-lightpink',
+    hex: '#ff77a9',
   },
   {
     name: 'darkpink',
     class: '-darkpink',
+    hex: '#b4004e',
   },
   {
     name: 'neonpink',
     class: '-neonpink',
+    hex: '#ff1199',
   },
   {
     name: 'white',
     class: '-white',
+    hex: '#ffffff',
   },
   {
     name: 'lightwhite',
     class: '-lightwhite',
+    hex: '#dadce0',
   },
   {
     name: 'darkwhite',
     class: '-darkwhite',
+    hex: '#9aa0a6',
   },
   {
     name: 'neonwhite',
     class: '-neonwhite',
+    hex: '#eafbff',
   },
   {
     name: 'black',
     class: '-black',
+    hex: '#202124',
   },
   {
     name: 'lightblack',
     class: '-lightblack',
+    hex: '#3c4043',
   },
   {
     name: 'darkblack',
     class: '-darkblack',
+    hex: '#000000',
   },
   {
     name: 'neonblack',
     class: '-neonblack',
+    hex: '#2c2c2c',
   },
   {
     name: 'gold',
     class: '-gold',
+    hex: '#ffd700',
   },
   {
     name: 'lightgold',
     class: '-lightgold',
+    hex: '#edc967',
   },
   {
     name: 'darkgold',
     class: '-darkgold',
+    hex: '#ae8625',
   },
   {
     name: 'neongold',
     class: '-neongold',
+    hex: '#cfaa01',
   },
   {
     name: 'silver',
     class: '-silver',
+    hex: '#c0c0c0',
   },
   {
     name: 'lightsilver',
     class: '-lightsilver',
+    hex: '#d8d8d8',
   },
   {
     name: 'darksilver',
     class: '-darksilver',
+    hex: '#757575',
   },
   {
     name: 'neonsilver',
     class: '-neonsilver',
+    hex: '#7285a5',
   },
   {
     name: 'brown',
     class: '-brown',
+    hex: '#a52a2a',
   },
   {
     name: 'lightbrown',
     class: '-lightbrown',
+    hex: '#e0ab76',
   },
   {
     name: 'darkbrown',
     class: '-darkbrown',
+    hex: '#442424',
   },
   {
     name: 'neonbrown',
     class: '-neonbrown',
+    hex: '#c3732a',
   },
 
 ]
