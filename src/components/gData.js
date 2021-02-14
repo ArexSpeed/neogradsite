@@ -212,218 +212,218 @@ export const ldColors = [
   {
     name: 'yellow',
     base: '#ffeb3b',
-    lighten: '',
-    darken: ''
+    lighten: 'hsl(54, 100%, 72%)',
+    darken: 'hsl(54, 100%, 52%)'
   },
   {
     name: 'lightyellow',
     base: '#ffff72',
-    lighten: '',
-    darken: ''
+    lighten: 'hsl(60, 100%, 82%)',
+    darken: 'hsl(60, 100%, 62%)'
   },
   {
     name: 'darkyellow',
     base: '#c8b900',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(55, 100%, 49%)',
+    darken: 'hsl(55, 100%, 29%)'
   },
   {
     name: 'neonyellow',
     base: '#ccff02',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(72, 100%, 60%)',
+    darken: 'hsl(72, 100%, 40%)'
   },
   {
     name: 'orange',
     base: '#ff7d00',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(29, 100%, 60%)',
+    darken: 'hsl(29, 100%, 40%)'
   },
   {
     name: 'lightorange',
     base: '#ff9f00',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(37, 100%, 60%)',
+    darken: 'hsl(37, 100%, 40%)'
   },
   {
     name: 'darkorange',
     base: '#e55300',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(22, 100%, 55%)',
+    darken: 'hsl(22, 100%, 35%)'
   },
   {
     name: 'neonorange',
     base: '#ff3c00',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(14, 100%, 60%)',
+    darken: 'hsl(14, 100%, 40%)'
   },
   {
     name: 'violet',
     base: '#ab47bc',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(291, 47%, 61%)',
+    darken: 'hsl(291, 47%, 41%)'
   },
   {
     name: 'lightviolet',
     base: '#df78ef',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(292, 79%, 80%)',
+    darken: 'hsl(292, 79%, 60%)'
   },
   {
     name: 'darkviolet',
     base: '#790e8b',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(291, 82%, 40%)',
+    darken: 'hsl(291, 82%, 20%)'
   },
   {
     name: 'neonviolet',
     base: '#6e0dd0',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(270, 88%, 53%)',
+    darken: 'hsl(270, 88%, 33%)'
   },
   {
     name: 'pink',
     base: '#ec407a',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(340, 82%, 69%)',
+    darken: 'hsl(340, 82%, 49%)'
   },
   {
     name: 'lightpink',
     base: '#ff77a9',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(338, 100%, 83%)',
+    darken: 'hsl(338, 100%, 63%)'
   },
   {
     name: 'darkpink',
     base: '#b4004e',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(334, 100%, 45%)',
+    darken: 'hsl(334, 100%, 25%)'
   },
   {
     name: 'neonpink',
     base: '#ff1199',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(326, 100%, 63%)',
+    darken: 'hsl(326, 100%, 43%)'
   },
   {
     name: 'white',
     base: '#ffffff',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(0, 0%, 100%)',
+    darken: 'hsl(0, 0%, 90%)'
   },
   {
     name: 'lightwhite',
     base: '#dadce0',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(0, 0%, 100%)',
+    darken: 'hsl(0, 0%, 90%)'
   },
   {
     name: 'darkwhite',
     base: '#9aa0a6',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(210, 6%, 73%)',
+    darken: 'hsl(210, 6%, 53%)'
   },
   {
     name: 'neonwhite',
     base: '#eafbff',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(191, 100%, 96%)',
+    darken: 'hsl(191, 100%, 86%)'
   },
   {
     name: 'black',
     base: '#202124',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(225, 6%, 23%)',
+    darken: 'hsl(225, 6%, 3%)'
   },
   {
     name: 'lightblack',
     base: '#3c4043',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(206, 6%, 35%)',
+    darken: 'hsl(206, 6%, 15%)'
   },
   {
     name: 'darkblack',
     base: '#000000',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(0, 0%, 10%)',
+    darken: 'hsl(0, 0%, 0%)'
   },
   {
     name: 'neonblack',
     base: '#2c2c2c',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(0, 0%, 27%)',
+    darken: 'hsl(0, 0%, 7%)'
   },
   {
     name: 'gold',
     base: '#ffd700',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(51, 100%, 60%)',
+    darken: 'hsl(51, 100%, 40%)'
   },
   {
     name: 'lightgold',
     base: '#edc967',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(44, 79%, 77%)',
+    darken: 'hsl(44, 79%, 57%)'
   },
   {
     name: 'darkgold',
     base: '#ae8625',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(42, 65%, 51%)',
+    darken: 'hsl(42, 65%, 31%)'
   },
   {
     name: 'neongold',
     base: '#cfaa01',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(49, 99%, 51%)',
+    darken: 'hsl(49, 99%, 31%)'
   },
   {
     name: 'silver',
     base: '#c0c0c0',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(0, 0%, 85%)',
+    darken: 'hsl(0, 0%, 65%)'
   },
   {
     name: 'lightsilver',
     base: '#d8d8d8',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(0, 0%, 95%)',
+    darken: 'hsl(0, 0%, 75%)'
   },
   {
     name: 'darksilver',
     base: '#757575',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(0, 0%, 56%)',
+    darken: 'hsl(0, 0%, 36%)'
   },
   {
     name: 'neonsilver',
     base: '#7285a5',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(218, 22%, 65%)',
+    darken: 'hsl(218, 22%, 45%)'
   },
   {
     name: 'brown',
     base: '#a52a2a',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(0, 59%, 51%)',
+    darken: 'hsl(0, 59%, 31%)'
   },
   {
     name: 'lightbrown',
     base: '#e0ab76',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(30, 63%, 77%)',
+    darken: 'hsl(30, 63%, 57%)'
   },
   {
     name: 'darkbrown',
     base: '#442424',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(0, 31%, 30%)',
+    darken: 'hsl(0, 31%, 10%)'
   },
   {
     name: 'neonbrown',
     base: '#c3732a',
-        lighten: '',
-    darken: ''
+    lighten: 'hsl(29, 65%, 56%)',
+    darken: 'hsl(29, 65%, 36%)'
   },
 
 ]
