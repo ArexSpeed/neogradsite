@@ -921,7 +921,7 @@ $colors: (
       box-shadow: 0px 0px 5px $val;
       overflow: hidden;
       &::after {
-        background: $val;
+        background: linear-gradient(61deg, lighten($val, 10%) 0%, $val 100%);
       }
       &:hover {
         box-shadow: 0px 0px 1px $val;
@@ -1013,7 +1013,7 @@ $colors: (
       box-shadow: 0px 0px 5px $val;
       overflow: hidden;
       &::after {
-        background: $val;
+        background: linear-gradient(61deg, lighten($val, 10%) 0%, $val 100%);
       }
       &:hover {
         box-shadow: 0px 0px 5px $val;

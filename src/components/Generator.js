@@ -4,6 +4,16 @@ import {rectSizes, longRectSizes, squareSizes, circleSizes, ldColors} from './gD
 const Generator = ({shape, size, radiusSize, radiusType, type, color, secondColor}) => {
 
   const [copySuccess, setCopySuccess] = useState('');
+  const [lighten, setLighten] = useState('')
+  const [darken, setDarken] = useState('')
+
+    //lighten, darken for gradient background
+    useEffect(() => {
+      ldColors.filter(item => item.base === color).map(item => setLighten(item.lighten))
+      ldColors.filter(item => item.base === color).map(item => setDarken(item.darken))
+      
+    }, [color])
+
   const copyToClipboard = async copyMe => {
     try {
       await navigator.clipboard.writeText(copyMe);
@@ -22,14 +32,7 @@ const Generator = ({shape, size, radiusSize, radiusType, type, color, secondColo
   const colorText = color === '#202124' || color === '#000000' || 
   color === '#3c4043' || color === '#2c2c2c' || color === '#a52a2a' || color === '#442424' ? '#fff' : '#000';
 
-  const [lighten, setLighten] = useState('')
-  const [darken, setDarken] = useState('')
-  //lighten, darken for gradient background
-  useEffect(() => {
-    ldColors.filter(item => item.base === color).map(item => setLighten(item.lighten))
-    ldColors.filter(item => item.base === color).map(item => setDarken(item.darken))
-    
-  }, [color])
+
 
   console.log('lighten: ', lighten, 'darken: ', darken)
 
@@ -555,6 +558,774 @@ if(type === '-border-move-light' && secondColor){
   .button:hover::after {
     width: 100%;
     height: 100%;
+  }
+  `
+}
+if(type === '-slide-left' && !secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  box-shadow: 0px 0px 5px ${color};
+  overflow: hidden;
+  z-index: 1;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(61deg, ${lighten} 0%, ${color} 100%);
+    transition: all 1s;
+    border-radius: inherit;
+    z-index: -1;
+    
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 1px ${color}, 0px 0px 1px ${lighten};
+  }
+  .button:hover::after{
+    width: 100%;
+  }
+  `
+}
+if(type === '-slide-left' && secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  box-shadow: 0px 0px 5px ${secondColor}, 0px 0px 5px ${color};
+  overflow: hidden;
+  z-index: 1;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(61deg, ${secondColor} 0%, ${color} 100%);
+    transition: all 1s;
+    border-radius: inherit;
+    z-index: -1;
+    
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 1px ${secondColor}, 0px 0px 1px ${color};
+  }
+  .button:hover::after{
+    width: 100%;
+  }
+  `
+}
+if(type === '-slide-right' && !secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  box-shadow: 0px 0px 5px ${color};
+  overflow: hidden;
+  z-index: 1;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(61deg, ${lighten} 0%, ${color} 100%);
+    transition: all 1s;
+    border-radius: inherit;
+    z-index: -1;
+    
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 1px ${color}, 0px 0px 1px ${lighten};
+  }
+  .button:hover::after{
+    width: 100%;
+  }
+  `
+}
+if(type === '-slide-right' && secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  box-shadow: 0px 0px 5px ${secondColor}, 0px 0px 5px ${color};
+  overflow: hidden;
+  z-index: 1;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(61deg, ${secondColor} 0%, ${color} 100%);
+    transition: all 1s;
+    border-radius: inherit;
+    z-index: -1;
+    
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 1px ${secondColor}, 0px 0px 1px ${color};
+  }
+  .button:hover::after{
+    width: 100%;
+  }
+  `
+}
+if(type === '-slide-down' && !secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  box-shadow: 0px 0px 5px ${color};
+  overflow: hidden;
+  z-index: 1;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: all 0.5s;
+    border-radius: inherit;
+    background: linear-gradient(61deg, ${lighten} 0%, ${color} 100%);
+    z-index: -1;
+    
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 1px ${color}, 0px 0px 1px ${lighten};
+  }
+  .button:hover::after{
+    height: 100%;
+  }
+  `
+}
+if(type === '-slide-down' && secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  box-shadow: 0px 0px 5px ${color};
+  overflow: hidden;
+  z-index: 1;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: all 0.5s;
+    border-radius: inherit;
+    background: linear-gradient(180deg, ${secondColor} 0%, ${color} 100%);
+    z-index: -1;
+    
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 1px ${secondColor}, 0px 0px 1px ${color};
+  }
+  .button:hover::after{
+    height: 100%;
+  }
+  `
+}
+if(type === '-slide-up' && !secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  box-shadow: 0px 0px 5px ${color};
+  overflow: hidden;
+  z-index: 1;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: all 0.5s;
+    border-radius: inherit;
+    background: linear-gradient(61deg, ${lighten} 0%, ${color} 100%);
+    z-index: -1;
+    
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 1px ${color}, 0px 0px 1px ${lighten};
+  }
+  .button:hover::after{
+    height: 100%;
+  }
+  `
+}
+if(type === '-slide-up' && secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  box-shadow: 0px 0px 5px ${color};
+  overflow: hidden;
+  z-index: 1;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: all 0.5s;
+    border-radius: inherit;
+    background: linear-gradient(180deg, ${secondColor} 0%, ${color} 100%);
+    z-index: -1;
+    
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 1px ${secondColor}, 0px 0px 1px ${color};
+  }
+  .button:hover::after{
+    height: 100%;
+  }
+  `
+}
+if(type === '-slide-middle-in' && !secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  z-index: 1;
+  box-shadow: 0px 0px 5px ${color};
+  overflow: hidden;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    color: ${colorText};
+    background: ${color};
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    z-index: -1;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    color: ${colorText};
+    background: ${color};
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    z-index: -1;
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 10px ${color};
+  }
+  .button:hover::after{
+    height: 50%;
+  }
+  .button:hover::before{
+    height: 50%;
+  }
+  `
+}
+if(type === '-slide-middle-in' && secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  z-index: 1;
+  box-shadow: 0px 0px 5px ${color};
+  overflow: hidden;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    color: #fff;
+    background: ${color};
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    z-index: -1;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    color: #fff;
+    background: ${secondColor};
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    z-index: -1;
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 10px ${color};
+  }
+  .button:hover::after{
+    height: 50%;
+  }
+  .button:hover::before{
+    height: 50%;
+  }
+  `
+}
+if(type === '-slide-middle-out' && !secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  z-index: 1;
+  box-shadow: 0px 0px 5px ${color};
+  overflow: hidden;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    color: ${colorText};
+    background: ${color};
+    transition: all 0.5s;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    z-index: -1;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    bottom: 50%;
+    right: 0;
+    width: 100%;
+    height: 0;
+    color: ${colorText};
+    background: ${color};
+    transition: all 0.5s;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    z-index: -1;
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 10px ${color};
+  }
+  .button:hover::after{
+    height: 50%;
+  }
+  .button:hover::before{
+    height: 50%;
+  }
+  `
+}
+if(type === '-slide-middle-out' && secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  z-index: 1;
+  box-shadow: 0px 0px 5px ${color};
+  overflow: hidden;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    color: ${colorText};
+    background: ${color};
+    transition: all 0.5s;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    z-index: -1;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    bottom: 50%;
+    right: 0;
+    width: 100%;
+    height: 0;
+    color: ${colorText};
+    background: ${secondColor};
+    transition: all 0.5s;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    z-index: -1;
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 10px ${color};
+  }
+  .button:hover::after{
+    height: 50%;
+  }
+  .button:hover::before{
+    height: 50%;
+  }
+  `
+}
+if(type === '-slide-center-in' && !secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  z-index: 1;
+  box-shadow: 0px 0px 5px ${color};
+  overflow: hidden;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: ${colorText};
+    background: ${color};
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    z-index: -1;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    color: ${colorText};
+    background: ${color};
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    z-index: -1;
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 10px ${color};
+  }
+  .button:hover::after{
+    width: 50%;
+  }
+  .button:hover::before{
+    width: 50%;
+  }
+  `
+}
+if(type === '-slide-center-in' && secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  z-index: 1;
+  box-shadow: 0px 0px 5px ${color};
+  overflow: hidden;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: ${colorText};
+    background: ${color};
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    z-index: -1;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    color: ${colorText};
+    background: ${secondColor};
+    transition: all 0.5s;
+    border-radius: inherit;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    z-index: -1;
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 10px ${secondColor};
+  }
+  .button:hover::after{
+    width: 50%;
+  }
+  .button:hover::before{
+    width: 50%;
+  }
+  `
+}
+if(type === '-slide-center-out' && !secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  z-index: 1;
+  box-shadow: 0px 0px 5px ${color};
+  overflow: hidden;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    color: ${colorText};
+    background: ${color};
+    transition: all 0.5s;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    z-index: -1;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 100%;
+    color: ${colorText};
+    background: ${color};
+    transition: all 0.5s;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    z-index: -1;
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 10px ${color};
+  }
+  .button:hover::after{
+    width: 50%;
+  }
+  .button:hover::before{
+    width: 50%;
+  }
+  `
+}
+if(type === '-slide-center-out' && secondColor){
+  typeCode = `
+  color: ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: transparent;
+  border: inherit;
+  z-index: 1;
+  box-shadow: 0px 0px 5px ${color};
+  overflow: hidden;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    color: ${colorText};
+    background: ${color};
+    transition: all 0.5s;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    z-index: -1;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 100%;
+    color: ${colorText};
+    background: ${secondColor};
+    transition: all 0.5s;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    z-index: -1;
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 10px ${secondColor};
+  }
+  .button:hover::after{
+    width: 50%;
+  }
+  .button:hover::before{
+    width: 50%;
+  }
+  `
+}
+if(type === '-slide-circle' && !secondColor){
+  typeCode = `
+  color: ${color};
+  box-shadow: 0px 0px 5px ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  background: transparent;
+  border: inherit;
+  overflow: hidden;
+  z-index: 1;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    color: ${colorText};
+    background: ${color};
+    transition: all 0.5s ease-in-out;
+    border-radius: 100%;
+    z-index: -1;
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 10px ${color};
+  }
+  .button:hover::after{
+    height: 300px;
+    width: 300px;
+  }
+  `
+}
+if(type === '-slide-circle' && secondColor){
+  typeCode = `
+  color: ${color};
+  box-shadow: 0px 0px 5px ${color};
+  text-align: center;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  background: transparent;
+  border: inherit;
+  overflow: hidden;
+  z-index: 1;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    color: ${colorText};
+    background: radial-gradient(${color}, ${secondColor});
+    transition: all 0.5s ease-in-out;
+    border-radius: 100%;
+    z-index: -1;
+  }
+  .button:hover{
+    color: ${colorText};
+    box-shadow: 0px 0px 10px ${color};
+  }
+  .button:hover::after{
+    height: 300px;
+    width: 300px;
   }
   `
 }
