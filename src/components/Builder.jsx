@@ -16,6 +16,17 @@ const Builder = () => {
   const [radiusTypeName, setRadiusTypeName] = useState('') //to generator
   const [colorName, setColorName] = useState('')
   const [secondColorName, setSecondColorName] = useState('')
+  const [copySuccess, setCopySuccess] = useState('Copied button code!');
+
+  const copyToClipboard = async copyMe => {
+    try {
+      await navigator.clipboard.writeText(copyMe);
+      setCopySuccess('Copied button code!');
+    } catch (err) {
+      setCopySuccess('Failed to copy!');
+    }
+    alert(copySuccess)
+  };
 
   const showShapes = shapes.map((shape) => (
     <button
@@ -106,7 +117,8 @@ Button
        Code with neograd library:
        </div>
        <div className="btn-code"> 
-       {`<button class="btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${radiusTypeChose} btn${typeChose} color${colorChose}${secondColorChose}">Button</button>`}
+       {`<button class="btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${radiusTypeChose} btn${typeChose} color${colorChose}${secondColorChose}">Button</button>`}<br />
+       <button className="btn btn-rect-3 btn-round-4-top btn-grad color-lightgreen-neongreen" onClick={() => copyToClipboard(`<button class="btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${radiusTypeChose} btn${typeChose} color${colorChose}${secondColorChose}">Button</button>`)}>Copy</button>
        </div>
        <div className="builder-code-title">
        Clean css code (without download neograd library):

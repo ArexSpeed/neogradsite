@@ -3,7 +3,7 @@ import {rectSizes, longRectSizes, squareSizes, circleSizes, ldColors} from './gD
 
 const Generator = ({shape, size, radiusSize, radiusType, type, color, secondColor}) => {
 
-  const [copySuccess, setCopySuccess] = useState('');
+  const [copySuccess, setCopySuccess] = useState('Copied css code!');
   const [lighten, setLighten] = useState('')
   const [darken, setDarken] = useState('')
 
@@ -17,10 +17,11 @@ const Generator = ({shape, size, radiusSize, radiusType, type, color, secondColo
   const copyToClipboard = async copyMe => {
     try {
       await navigator.clipboard.writeText(copyMe);
-      setCopySuccess('Copied!');
+      setCopySuccess('Copied css code!'); 
     } catch (err) {
       setCopySuccess('Failed to copy!');
     }
+    alert(copySuccess)
   };
 
   let beginCode = `.button {`
@@ -1900,7 +1901,7 @@ if(type === '-pulse-fast' && secondColor){
   return (
     <div>
         <div className="code-gen">{beginCode + sizeCode + radiusCode + typeCode}</div>
-        <button onClick={() => copyToClipboard(`${beginCode} ${sizeCode} ${radiusCode} ${typeCode}`)}>Copy</button>
+        <button className="btn btn-rect-3 btn-round-4-top btn-grad color-lightgreen-neongreen" onClick={() => copyToClipboard(`${beginCode} ${sizeCode} ${radiusCode} ${typeCode}`)}>Copy</button>
     </div>
   )
 }
