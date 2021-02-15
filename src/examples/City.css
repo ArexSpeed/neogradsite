@@ -68,8 +68,10 @@
   top: 30%;
   right: 0;
   width: 60%;
+  margin-right: 20px;
   font-family: 'Pacifico', cursive;
   color: #fff;
+  z-index: 15;
 }
 .city-title{
   font-size: 50px;

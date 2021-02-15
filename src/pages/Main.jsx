@@ -1,5 +1,7 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import ButtonChanger from '../components/ButtonChanger'
+import Examples from '../components/Examples'
 import '../styles/Main.scss'
 
 const Main = () => {
@@ -25,10 +27,11 @@ const Main = () => {
         <div className="video">
       <video width="956" height="385" src="/video/buildvideo.mp4" autoPlay muted loop/>
       </div>
+      <Link to='/build'><button class="btn btn-rect-5 btn-border-move-light color-neonblue">Builder</button></Link>
       </section>
 
       <section className="example">
-
+        <Examples />
       </section>
 
     </main>
