@@ -1329,7 +1329,574 @@ if(type === '-slide-circle' && secondColor){
   }
   `
 }
+if(type === '-border-behind' && !secondColor){
+  typeCode = `
+  border: none;
+  position: relative;
+  color: ${colorText};
+  background: linear-gradient(10deg, ${lighten}, ${darken});
+  transition: all 0.5s ease-in;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: inherit;
+    transition: all 0.5s ease-in;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: inherit;
+    transition: all 0.5s ease-in;
+  }
+  .button:hover{
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in;
+  }
+  .button:hover::before{
+    top: -15px;
+    left: 15px;
+    transition: all 0.35s ease-in;
+    border: 2px solid ${color};
+    box-shadow: 0 0 20px ${color};
+  }
+  .button:hover::after{
+    top: 15px;
+    left: -15px;
+    transition: all 0.35s ease-in;
+    border: 2px solid ${color};
+    box-shadow: 0 0 20px ${color};
+  }
+  `
+}
+if(type === '-border-behind' && secondColor){
+  typeCode = `
+  border: none;
+  position: relative;
+  color: ${colorText};
+  background: linear-gradient(10deg, ${color}, ${secondColor});
+  transition: all 0.5s ease-in;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: inherit;
+    transition: all 0.5s ease-in;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: inherit;
+    transition: all 0.5s ease-in;
+  }
+  .button:hover{
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in;
+  }
+  .button:hover::before{
+    top: -15px;
+    left: 15px;
+    transition: all 0.35s ease-in;
+    border: 2px solid ${secondColor};
+    box-shadow: 0 0 20px ${secondColor};
+  }
+  .button:hover::after{
+    top: 15px;
+    left: -15px;
+    transition: all 0.35s ease-in;
+    border: 2px solid ${color};
+    box-shadow: 0 0 20px ${color};
+  }
+  `
+}
+if(type === '-shadow-behind' && !secondColor){
+  typeCode = `
+  border: none;
+  position: relative;
+  color: ${colorText};
+  background: linear-gradient(10deg, ${color}, ${secondColor});
+  transition: all 0.5s ease-in;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: inherit;
+    transition: all 0.5s ease-in;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: inherit;
+    transition: all 0.5s ease-in;
+  }
+  .button:hover{
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in;
+  }
+  .button:hover::before{
+    top: -15px;
+    left: 15px;
+    transition: all 0.35s ease-in;
+    background: ${color};
+    box-shadow: 0 0 20px ${color};
+  }
+  .button:hover::after{
+    top: 15px;
+    left: -15px;
+    transition: all 0.35s ease-in;
+    background: ${color};
+    box-shadow: 0 0 20px ${color};
+  }
+  `
+}
+if(type === '-shadow-behind' && secondColor){
+  typeCode = `
+  border: none;
+  position: relative;
+  color: ${colorText};
+  background: linear-gradient(10deg, ${color}, ${secondColor});
+  transition: all 0.5s ease-in;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: inherit;
+    transition: all 0.5s ease-in;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: inherit;
+    transition: all 0.5s ease-in;
+  }
+  .button:hover{
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in;
+  }
+  .button:hover::before{
+    top: -15px;
+    left: 15px;
+    transition: all 0.35s ease-in;
+    background: ${secondColor};
+    box-shadow: 0 0 20px ${secondColor};
+  }
+  .button:hover::after{
+    top: 15px;
+    left: -15px;
+    transition: all 0.35s ease-in;
+    background: ${color};
+    box-shadow: 0 0 20px ${color};
+  }
+  `
+}
+if(type === '-double-border' && !secondColor){
+  typeCode = `
+  color: ${color};
+  border: none;
+  border-top: 2px groove ${color};
+  border-bottom: 2px groove ${color};
+  background: transparent;
+  transition: all 0.35s ease-in;
+  }
+  .button:hover{
+    border-top: 10px groove ${color};
+    border-bottom: 10px groove ${color};
+  }
+  `
+}
+if(type === '-double-border' && secondColor){
+  typeCode = `
+  color: ${color};
+  border: none;
+  border-top: 2px groove ${color};
+  border-bottom: 2px groove ${secondColor};
+  background: transparent;
+  transition: all 0.35s ease-in;
+  }
+  .button:hover{
+    border-top: 10px groove ${color};
+    border-bottom: 10px groove ${secondColor};
+  }
+  `
+}
+if(type === '-double-border2' && !secondColor){
+  typeCode = `
+  color: ${color};
+  border: none;
+  border-left: 2px groove ${color};
+  border-right: 2px groove ${color};
+  background: transparent;
+  transition: all 0.35s ease-in;
+  }
+  .button:hover{
+    border-left: 10px groove ${color};
+    border-right: 10px groove ${color};
+  }
+  `
+}
+if(type === '-double-border2' && secondColor){
+  typeCode = `
+  color: ${color};
+  border: none;
+  border-left: 2px groove ${color};
+  border-right: 2px groove ${secondColor};
+  background: transparent;
+  transition: all 0.35s ease-in;
+  }
+  .button:hover{
+    border-left: 10px groove ${color};
+    border-right: 10px groove ${secondColor};
+  }
+  `
+}
+if(type === '-hide-border' && !secondColor){
+  typeCode = `
+  letter-spacing: 0;
+  background: transparent;
+  border: none;
+  line-height: 50px;
+  color: ${color};
+  transition: all 0.35s ease-in;
+  }
+  .button:hover{
+    letter-spacing: 2px;
+  }
+  .button::after,
+  .button::before {
+    border: 1px solid rgba(0,0,0,0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 0.35s ease-in-out;
+    width: 0;
+  }
+  .button:hover::after,
+  .button:hover::before {
+    border-color: ${color};
+    transition: width 0.35s ease-in-out;
+    width: 100%;
+  }
+  .button:hover::before {
+    bottom: auto;
+    top: 0;
+    width: 100%;
+  }
+  `
+}
+if(type === '-hide-border' && secondColor){
+  typeCode = `
+  letter-spacing: 0;
+  background: transparent;
+  border: none;
+  line-height: 50px;
+  color: ${color};
+  transition: all 0.35s ease-in;
+  }
+  .button:hover{
+    letter-spacing: 2px;
+  }
+  .button::after,
+  .button::before {
+    border: 1px solid rgba(0,0,0,0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 0.35s ease-in-out;
+    width: 0;
+  }
+  .button:hover::after{
+    border-color: ${secondColor};
+    transition: width 0.35s ease-in-out;
+    width: 100%;
+  }
+  .button:hover::before {
+    border-color: ${color};
+    transition: width 0.35s ease-in-out;
+    width: 100%;
+    bottom: auto;
+    top: 0;
+  }
+  `
+}
 
+if(type === '-surround-border-hover' && !secondColor){
+  typeCode = `
+  position: relative;
+  color: ${colorText};
+  background: linear-gradient(10deg, ${lighten}, ${darken});
+  border: none;
+  margin: auto 40px;
+  transition: all 0.35s ease-in;
+  }
+  .button::before{
+    content: "";
+    border-radius: inherit;
+    width: 0;
+    height: 0;
+    border: 5px solid ${color};
+    border-color: $val;
+    box-shadow: 0 0 60px ${lighten};
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+    z-index: -1;
+  }
+  .button:hover::before{
+    opacity: 1;
+    width: 115%;
+    height: 130%;
+  }
+  `
+}
+if(type === '-surround-border-hover' && secondColor){
+  typeCode = `
+  position: relative;
+  color: ${colorText};
+  background: linear-gradient(10deg, ${lighten}, ${darken});
+  border: none;
+  margin: auto 40px;
+  transition: all 0.35s ease-in;
+  }
+  .button::before{
+    content: "";
+    border-radius: inherit;
+    width: 0;
+    height: 0;
+    border: 5px solid ${secondColor};
+    border-color: $val;
+    box-shadow: 0 0 60px ${secondColor};
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+    z-index: -1;
+  }
+  .button:hover::before{
+    opacity: 1;
+    width: 115%;
+    height: 130%;
+  }
+  `
+}
+if(type === '-pulse' && !secondColor){
+  typeCode = `
+  color: ${colorText};
+  position: relative;
+  background: transparent;
+  border: none;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    border-radius: inherit;
+    background: linear-gradient(10deg,${lighten},${darken});
+    box-shadow: 0 0 60px ${lighten};
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+  `
+}
+if(type === '-pulse' && secondColor){
+  typeCode = `
+  color: ${colorText};
+  position: relative;
+  background: transparent;
+  border: none;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    border-radius: inherit;
+    background: linear-gradient(10deg,${lighten},${secondColor});
+    box-shadow: 0 0 60px ${lighten};
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+  `
+}
+if(type === '-pulse-fast' && !secondColor){
+  typeCode = `
+  color: ${colorText};
+  position: relative;
+  background: transparent;
+  border: none;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    border-radius: inherit;
+    background: linear-gradient(10deg,${lighten},${darken});
+    box-shadow: 0 0 60px ${lighten};
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: pulse 1.5s infinite;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    border-radius: inherit;
+    background: linear-gradient(10deg,${lighten},${darken});
+    box-shadow: 0 0 60px ${lighten};
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: pulse 1.5s infinite;
+    animation-delay: 0.75s;
+  }
+  @keyframes pulse {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+  `
+}
+if(type === '-pulse-fast' && secondColor){
+  typeCode = `
+  color: ${colorText};
+  position: relative;
+  background: transparent;
+  border: none;
+  }
+  .button::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    border-radius: inherit;
+    background: linear-gradient(10deg,${lighten},${secondColor});
+    box-shadow: 0 0 60px ${lighten};
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: pulse 1.5s infinite;
+  }
+  .button::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    border-radius: inherit;
+    background: linear-gradient(10deg,${lighten},${secondColor});
+    box-shadow: 0 0 60px ${lighten};
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: pulse 1.5s infinite;
+    animation-delay: 0.75s;
+  }
+  @keyframes pulse {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+  `
+}
   return (
     <div>
         <div className="code-gen">{beginCode + sizeCode + radiusCode + typeCode}</div>

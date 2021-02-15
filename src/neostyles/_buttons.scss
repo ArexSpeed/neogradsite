@@ -1751,6 +1751,7 @@ $colors: (
     opacity: 0.5;
     z-index: -1;
     border-radius: inherit;
+    transition: all 0.5s ease-in;
   }
   &::after {
     position: absolute;
@@ -1762,10 +1763,12 @@ $colors: (
     opacity: 0.5;
     z-index: -1;
     border-radius: inherit;
+    transition: all 0.5s ease-in;
   }
   &:hover {
     top: 0;
     left: 0;
+    transition: all 0.5s ease-in;
     &::before {
       top: -15px;
       left: 15px;
@@ -2040,7 +2043,7 @@ $colors: (
 
   &:after,
   &:before {
-    border: 1px solid rgba(#fff, 0);
+    border: 1px solid rgba(0,0,0, 0);
     bottom: 0px;
     content: " ";
     display: block;
@@ -2054,13 +2057,13 @@ $colors: (
   &:hover:before {
     border-color: #fff;
     transition: width 350ms ease-in-out;
-    width: 70%;
+    width: 100%;
   }
 
   &:hover:before {
     bottom: auto;
     top: 0;
-    width: 70%;
+    width: 100%;
   }
   @each $key, $val in $colors {
     &.color-#{$key} {
@@ -2089,96 +2092,6 @@ $colors: (
 }
 
 // SURROUND ///
-.btn-surround-border {
-  position: relative;
-  background: green;
-  border: none;
-  margin: auto 20px;
-  &::before {
-    content: "";
-    border-radius: inherit;
-    width: 115%;
-    height: 130%;
-    border: 5px solid $black;
-    box-shadow: 0 0 60px rgba(0, 0, 0, 1);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    transition: all 0.3s ease-in-out 0s;
-  }
-  @each $key, $val in $colors {
-    &.color-#{$key} {
-      background: linear-gradient(10deg, lighten($val, 10%), darken($val, 10%));
-      transition: all 0.35s ease-in;
-      @if $key ==
-        black or
-        $key ==
-        lightblack or
-        $key ==
-        darkblack or
-        $key ==
-        neonblack or
-        $key ==
-        brown or
-        $key ==
-        darkbrown
-      {
-        color: white;
-      } @else {
-        color: black;
-      }
-      &::before {
-        border-color: $val;
-        box-shadow: 0 0 60px lighten($val, 10%);
-        padding: 20px;
-      }
-      &:hover {
-        transform: scale(1.2);
-        transition: all 0.35s ease-in;
-      }
-    }
-  }
-  @each $key, $val in $colors {
-    @each $key2, $val2 in $colors {
-      &.color-#{$key}-#{$key2} {
-        background: linear-gradient(
-          10deg,
-          lighten($val, 10%),
-          darken($val, 10%)
-        );
-        transition: all 0.35s ease-in;
-        @if $key ==
-          black or
-          $key ==
-          lightblack or
-          $key ==
-          darkblack or
-          $key ==
-          neonblack or
-          $key ==
-          brown or
-          $key ==
-          darkbrown
-        {
-          color: white;
-        } @else {
-          color: black;
-        }
-        &::before {
-          border-color: $val2;
-          box-shadow: 0 0 60px lighten($val2, 10%);
-        }
-        &:hover {
-          transform: scale(1.2);
-          transition: all 0.35s ease-in;
-        }
-      }
-    }
-  }
-}
-
 .btn-surround-border-hover {
   position: relative;
   background: green;
