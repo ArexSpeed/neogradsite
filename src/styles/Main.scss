@@ -90,8 +90,9 @@
   align-items: center;
 }
 .btn-code{
-  height: 40px;
+  min-height: 40px;
   width: 700px;
+  margin: 10px;
   border-radius: 10px;
   background: #555;
   color: #fff;

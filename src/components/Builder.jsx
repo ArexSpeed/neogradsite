@@ -94,19 +94,26 @@ Button
       <h2 style={{color: '#fff'}}>Change your background:</h2> 
       <input type='color' onChange={(e) => setColorBg(e.target.value)} />
 
-      {typeChose && (
-        <Generator shape={shapeChose} size={sizeChose} radiusSize={radiusSizeName} radiusType={radiusTypeName} type={typeChose} color={colorName} secondColor={secondColorName} />
-      )
-      }
 
       {typeChose &&
       (
       <>
       <h2 style={{color: '#fff'}}>Your button:</h2> 
+
       <div className="builder-box" style={{backgroundColor: `${colorBg}` ,display: 'flex', flexDirection: 'column' ,justifyContent: 'center', alignItems: 'center'}}>
-       <div className="btn-code"> {`<button class="btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${radiusTypeChose} btn${typeChose} color${colorChose}${secondColorChose}">Button</button>`}
+      {showButton}
+      <div className="builder-code-title">
+       Code with neograd library:
        </div>
-        {showButton}
+       <div className="btn-code"> 
+       {`<button class="btn btn${shapeChose}${sizeChose} ${radiusSizeChose}${radiusTypeChose} btn${typeChose} color${colorChose}${secondColorChose}">Button</button>`}
+       </div>
+       <div className="builder-code-title">
+       Clean css code (without download neograd library):
+       </div>
+       <div className="btn-code"> 
+        <Generator shape={shapeChose} size={sizeChose} radiusSize={radiusSizeName} radiusType={radiusTypeName} type={typeChose} color={colorName} secondColor={secondColorName} />
+       </div>
       </div>
       </>
       )
