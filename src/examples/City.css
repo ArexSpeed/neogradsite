@@ -18,6 +18,17 @@
   background: linear-gradient(60deg, red,blue);
   opacity: 0.2;
 }
+.navbar-city-top{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 60%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255,255,255,.85);
+  clip-path: polygon(0 0, 61% 0, 59% 100%, 0% 100%);
+  z-index: 11;
+}
 .navbar-city{
   display: flex;
   flex-direction: column;
@@ -30,7 +41,12 @@
   top: 0;
   left: 0;
   clip-path: polygon(0 0, 61% 0, 46% 100%, 0% 100%);
+  transition: all 0.5s ease-in;
   z-index: 10;
+}
+.navbar-city.hide{
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in;
 }
 .nav-logo{
   font-size: 30px;
@@ -39,7 +55,7 @@
 .city-menu{
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 70px;
   padding: 0;
 }
 .city-menu > button {
@@ -60,4 +76,74 @@
 }
 .city-subtitle{
   font-size: 40px;
+}
+
+/* Hamburger menu */
+.hamburger-menu{
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  background-color: #eee;
+  border-radius: .40px;
+  box-shadow: 5px 5px 10px #cacaca,
+              5px -5px 10px #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+.hamburger-menu:hover{
+  box-shadow: inset 5px 5px 10px #cacaca,
+  inset -5px -5px 10px #fff;
+}
+.bar{
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  display: inline-block;
+  position: relative;
+  transition: background-color .5s;
+}
+.bar::before,
+.bar::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  background-color: #333;
+  transition: all .5s;
+}
+.bar:before{
+  top: -.6em;
+  left: 0;
+}
+.bar:after{
+  top: .6em;
+  left: 0;
+}
+
+/* Media queries */
+@media screen and (max-width: 1100px){
+  .navbar-city-top{
+    width: 100%;
+    clip-path: polygon(0 0, 95% 0, 92% 100%, 0% 100%);
+  }
+  .navbar-city{
+    width: 100%;
+    clip-path: polygon(0 0, 95% 0, 79% 100%, 0% 100%);
+  }
+  .main-city{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+  }
+  .city-title{
+    font-size: 25px;
+  }
+  .city-subtitle{
+    font-size: 20px;
+  }
 }
