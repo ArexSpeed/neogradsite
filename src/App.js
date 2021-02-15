@@ -4,6 +4,7 @@ import Build from './pages/Build';
 import Docs from './pages/Docs';
 import Main from './pages/Main';
 import Nav from './pages/Nav';
+import City from './examples/City';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
           <Route exact path='/' component={Main} />
           <Route exact path='/build' component={Build} />
           <Route exact path='/docs' component={Docs} />  
+          <Route path='/example/city' component={City} />  
+
         </Switch>
       </Router>
         
