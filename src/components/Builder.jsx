@@ -4,7 +4,7 @@ import Generator from './Generator';
 
 
 const Builder = () => {
-  const [colorBg, setColorBg] = useState('#fff')
+  const [colorBg, setColorBg] = useState('#000')
   const [shapeChose, setShapeChose] = useState('')
   const [sizeChose, setSizeChose] = useState('')
   const [radiusSizeChose, setRadiusSizeChose] = useState('')

@@ -3,6 +3,7 @@ import ButtonChanger from '../components/ButtonChanger'
 import '../styles/Main.scss'
 
 const Main = () => {
+
   return (
     <main>
       <section className="hero">
@@ -19,7 +20,11 @@ const Main = () => {
       </section>
 
       <section className="builder">
-
+      <h2 className="section-title">Build your button</h2>
+      <h3>Just few click with out builder</h3>
+        <div className="video">
+      <video width="956" height="385" src="/video/buildvideo.mp4" autoPlay muted loop/>
+      </div>
       </section>
 
       <section className="example">
