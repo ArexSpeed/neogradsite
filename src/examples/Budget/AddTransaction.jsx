@@ -11,7 +11,7 @@ const AddTransaction = () => {
     e.preventDefault();
 
     const newTransaction = {
-      id: Math.floor(Math.random() * 1000),
+      id: Math.floor(Math.random() * 100000),
       text,
       amount: parseInt(amount)
     };
@@ -24,29 +24,30 @@ const AddTransaction = () => {
     <button className="btn btn-rect-long-4 btn-double-border color-yellow-lightyellow"><h3>Add new transaction</h3></button>
       <form className="form-budget" onSubmit={onSubmit}>
         <div className="form-control">
-          <label htmlFor="text">Text</label>
           <input
+            className='form-input'
             type="text"
             value={text}
             onChange={e => setText(e.target.value)}
             id="text"
             placeholder="Enter text..."
           />
-        </div>
+      </div>
         <div className="form-control">
-          <label htmlFor="amount">
-            Amount <br />
-            (negative - expense, positive - income)
-          </label>
+          
           <input
+            className='form-input'
             type="number"
             value={amount}
             onChange={e => setAmount(e.target.value)}
             id="amount"
-            placeholder="Enter amount..."
+            placeholder="Enter +/- amount..."
           />
+          <label htmlFor="amount">Add "-" if negative</label>
         </div>
-        <button className="btn">Add transaction</button>
+        <div className="form-button">
+        <button className="btn btn-rect-5 btn-round-3 btn-surround-border-hover color-neonblue">Add transaction</button>
+        </div>
       </form>
     </>
   );
