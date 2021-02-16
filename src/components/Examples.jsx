@@ -15,7 +15,9 @@ const Examples = () => {
         </Link>
       </div>
       <div className="examples-container-bottom">
+      <Link to='/example/relax'>
         <div className="example-box"></div>
+        </Link>
         <div className="example-box"></div>
       </div>
       

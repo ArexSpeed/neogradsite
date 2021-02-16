@@ -6,6 +6,7 @@ import Main from './pages/Main';
 import Nav from './pages/Nav';
 import City from './examples/City/City';
 import Budget from './examples/Budget/Budget';
+import Relax from './examples/Relax/Relax';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path='/docs' component={Docs} />  
           <Route path='/example/city' component={City} />  
           <Route path='/example/budget' component={Budget} />  
+          <Route path='/example/relax' component={Relax} />  
 
         </Switch>
       </Router>

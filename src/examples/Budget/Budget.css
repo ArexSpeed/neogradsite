@@ -5,16 +5,18 @@
   align-items: center;
   width: 100vw;
   min-height: 100vh;
-  padding-top: 50px;
-  background: linear-gradient(to left, #555, #000);
-  color: #fff;
+  background: linear-gradient(to left, #555, #222);
   overflow: scroll;
+  position: relative;
+  z-index: 11;
 }
+
 .container-glass{
   width: 80%;
   height: auto;
+  margin: 50px auto;
   padding: 20px;
-  background: rgba( 255, 255, 255, 0.20 );
+  background: rgba( 0,0,0, 0.20 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 2.0px );
   -webkit-backdrop-filter: blur( 2.0px );
