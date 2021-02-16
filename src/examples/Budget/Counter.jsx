@@ -18,17 +18,22 @@ const Counter = () => {
 
   return (
     <div className="container-counter">
-      <div>
-        <h4>Income</h4>
-        <p id="money-plus" className="money plus">
-          +${income}
-        </p>
+      <div className="counter-box">
+      <button className="btn btn-square-5 btn-round-3 btn-neon-border color-green-lightgreen">
+        <h4 style={{fontSize: '30px'}}>Income</h4>
+          <p id="money-plus" style={{fontSize: '20px'}}>
+            +${income}
+          </p>
+      </button>
+        
       </div>
-      <div>
-        <h4>Expense</h4>
-        <p id="money-minus" className="money minus">
-          -${expense}
-        </p>
+      <div className="counter-box">
+      <button className="btn btn-square-5 btn-round-3 btn-neon-border color-red-lightred">
+        <h4 style={{fontSize: '30px'}}>Expense</h4>
+          <p id="money-minus" style={{fontSize: '20px'}}>
+            -${expense}
+          </p>
+      </button>
       </div>
     </div>
   );
