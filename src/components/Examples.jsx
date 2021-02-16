@@ -10,7 +10,9 @@ const Examples = () => {
         <Link to='/example/city'>
         <div className="example-box"></div>
         </Link>
+        <Link to='/example/budget'>
         <div className="example-box"></div>
+        </Link>
       </div>
       <div className="examples-container-bottom">
         <div className="example-box"></div>
