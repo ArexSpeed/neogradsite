@@ -7,6 +7,16 @@
   min-width: 100vw;
   background: rgb(85, 50, 209);
 }
+.ai-navbar{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+.ai-navlist{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
 .color-nav{
   color: #fff;
 }

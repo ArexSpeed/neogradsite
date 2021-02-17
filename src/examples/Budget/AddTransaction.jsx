@@ -21,7 +21,7 @@ const AddTransaction = () => {
 
   return (
     <>
-    <button className="btn btn-rect-long-4 btn-double-border color-yellow-lightyellow"><h3>Add new transaction</h3></button>
+    <button className="btn-rect-long-4 btn-double-border color-yellow-lightyellow"><h3>Add new transaction</h3></button>
       <form className="form-budget" onSubmit={onSubmit}>
         <div className="form-control">
           <input
