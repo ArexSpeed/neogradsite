@@ -7,6 +7,7 @@ import Nav from './pages/Nav';
 import City from './examples/City/City';
 import Budget from './examples/Budget/Budget';
 import Relax from './examples/Relax/Relax';
+import AISite from './examples/AISite/AISite';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/example/city' component={City} />  
           <Route path='/example/budget' component={Budget} />  
           <Route path='/example/relax' component={Relax} />  
+          <Route path='/example/aisite' component={AISite} />  
 
         </Switch>
       </Router>
