@@ -17,8 +17,29 @@
   flex-direction: row;
   list-style-type: none;
 }
-.color-nav{
-  color: #fff;
+.ai-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.ai-col-6{
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+.ai-col-4{
+  flex: 0.33;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+.ai-img-fluid{
+  max-width: 80%;
+}
+.ai-section{
+  margin-top: 80px;
 }
 .card-ai{
   height: 400px;
@@ -36,6 +57,15 @@
   transition: all 0.5s ease-in;
 
 }
+.card-title{
+  font-size: 30px;
+}
+.card-text{
+  text-align: center;
+}
+.card-time{
+  color: #aaa;
+}
 .footer-container{
   background: rgb(85, 50, 209);
   display: flex;
@@ -44,6 +74,7 @@
   align-items: center;
   color: #fff;
   min-width: 100vw;
+  padding-bottom: 30px;
 }
 .ai-input{
   min-width: 300px;
