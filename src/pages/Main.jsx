@@ -25,7 +25,7 @@ const Main = () => {
       <h2 className="section-title">Build your button</h2>
       <h3>Just few click with out builder</h3>
         <div className="video">
-      <video width="956" height="385" src="/video/buildvideo.mp4" autoPlay muted loop/>
+      <video className="main-video" width="956" height="385" src="/video/buildvideo.mp4" autoPlay muted loop/>
       </div>
       <Link to='/build'><button class="btn btn-rect-5 btn-border-move-light color-neonblue">Builder</button></Link>
       </section>

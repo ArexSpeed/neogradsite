@@ -8,10 +8,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    //Media queries
+  @media screen and (max-width: 1024px){
+      flex-direction: column;
+  }
   }
   &-bottom{
     margin-bottom: 50px;
-  }
+  } 
+  
 }
 .example-box{
   width: 400px;
@@ -26,4 +31,9 @@
     transform: scale(1.1);
     transition: all 0.3s ease-in;
   }
+  @media screen and (max-width: 640px){
+    width: 280px;
+    height: 210px;
+     
+    }
 }
