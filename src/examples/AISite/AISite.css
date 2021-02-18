@@ -1,6 +1,7 @@
 .ai-container{
   width: 100vw;
   position: relative;
+  background: #fff;
   z-index: 11;
 }
 .hero-container{
@@ -40,6 +41,10 @@
 }
 .ai-section{
   margin-top: 80px;
+}
+.ai-description{
+  margin: 10px;
+  text-align: justify;
 }
 .card-ai{
   height: 400px;
@@ -85,4 +90,11 @@
 }
 .ai-input::placeholder{
   color: #fff;
+}
+
+@media screen and (max-width: 768px){
+  .ai-row{
+    flex-direction: column;
+  }
+
 }

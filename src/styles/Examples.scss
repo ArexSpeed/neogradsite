@@ -20,7 +20,7 @@
 }
 .example-box{
   width: 400px;
-  height: 300px;
+  height: 250px;
   margin: 20px;
   background: #555;
   border: none;
@@ -32,8 +32,8 @@
     transition: all 0.3s ease-in;
   }
   @media screen and (max-width: 640px){
-    width: 280px;
-    height: 210px;
+    width: 250px;
+    height: 150px;
      
     }
 }

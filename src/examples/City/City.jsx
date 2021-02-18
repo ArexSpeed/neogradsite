@@ -34,9 +34,9 @@ const City = () => {
             Travel
           </button>
         </ul>
-        <div className="nav-link">
+        {/* <div className="nav-link">
           <Link to="/">NeoGrad</Link>
-        </div>
+        </div> */}
       </nav>
       <main className="main-city">
         <h1 className="city-title">Discover your city once again!</h1>

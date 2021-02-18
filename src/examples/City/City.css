@@ -27,7 +27,7 @@
   left: 0;
   background-color: rgba(255,255,255,.85);
   clip-path: polygon(0 0, 61% 0, 59% 100%, 0% 100%);
-  z-index: 11;
+  z-index: 30;
 }
 .navbar-city{
   display: flex;
@@ -42,7 +42,7 @@
   left: 0;
   clip-path: polygon(0 0, 61% 0, 46% 100%, 0% 100%);
   transition: all 0.5s ease-in;
-  z-index: 10;
+  z-index: 20;
 }
 .navbar-city.hide{
   transform: translateX(-100%);

@@ -48,11 +48,8 @@ const AISite = () => {
           <section className="ai-row" style={{ marginTop: "10rem" }}>
             <div className="ai-col-6" md="6" xs="12" style={{ color: "#fff" }}>
               <h2>Let's start AI Course</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Repellendus ea nulla nihil nesciunt architecto distinctio amet
-                voluptas eos, reiciendis ducimus tempore odio, sed illo
-                consequuntur odit adipisci reprehenderit maiores sunt.
+              <p className="ai-description">
+              Artificial intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think like humans and mimic their actions. This is the technology of the future. With our courses you can learn create new things thanks to AI. In this course you will learn what Artificial Intelligence (AI) is, explore use cases and applications of AI, understand AI concepts and terms like machine learning, deep learning and neural networks. You will be exposed to various issues and concerns surrounding AI such as ethics and bias, & jobs, and get advice from experts about learning and starting a career in AI.  You will also demonstrate AI in action with a mini project.
               </p>
               <div className="ai-button-group">
                 
