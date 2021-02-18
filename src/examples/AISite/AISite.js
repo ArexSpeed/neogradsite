@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-
+import MenuIcon from '@material-ui/icons/Menu';
 import './AISite.css'
 
 const AISite = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggle = () => setIsOpen(!isOpen);
   return (
@@ -14,8 +14,12 @@ const AISite = () => {
             <button className="btn btn-rect-5 btn-round-2-double2 btn-neon-reflex color-neonblue">
               AI TECH
             </button>
-            
+            <div className="ai-menu">
+            <MenuIcon onClick={toggle} style={{fontSize: '50px'}}/>
+            </div>
+            {isOpen && 
               <ul className="ai-navlist" >
+
                 <li>
                   <button className="btn btn-rect-5 btn-round-2-double2 btn-hide-border color-neonwhite">
                     HOME
@@ -41,8 +45,10 @@ const AISite = () => {
                     CONTACT
                   </button>
                 </li>
+                
               </ul>
-
+}
+              
           </nav>
 
           <section className="ai-row" style={{ marginTop: "10rem" }}>

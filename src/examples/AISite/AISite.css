@@ -13,6 +13,12 @@
   flex-direction: row;
   padding: 5px;
 }
+.ai-menu{
+  color: #45f3ff;
+  margin: 20px;
+  margin-left: 50vw;
+  display: none;
+}
 .ai-navlist{
   display: flex;
   flex-direction: row;
@@ -96,5 +102,13 @@
   .ai-row{
     flex-direction: column;
   }
-
+  .ai-navlist{
+    flex-direction: column;
+    transform: translateX(-100%);
+    background:rgb(85, 50, 209);
+    margin-top: 100px;
+  }
+  .ai-menu{
+    display: flex;
+  }
 }
