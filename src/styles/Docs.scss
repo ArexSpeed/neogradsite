@@ -14,6 +14,10 @@
     box-shadow: inset 0 0 5px rgba(0,0,0,.3);
     overflow: hidden;
     position: fixed;
+    transition: 0.3s ease-in;
+    @media screen and (max-width: 768px) {
+      width: 75%;
+    }
     & li{
       list-style: none;
       margin-bottom: 10px;
@@ -23,11 +27,41 @@
         color: #000;
       }
     }
+    &.hide{
+      width: 5%;
+      transition: 0.3s ease-in;
+      @media screen and (max-width: 768px) {
+        width: 10%;
+      }
+    }
+
   }
   &-description{
     width: 75%;
     margin-left: 25%;
     text-align: left;
+    transition: 0.3s ease-in;
+    @media screen and (max-width: 768px) {
+      width: 25%;
+      margin-left: 75%;
+    }
+    &.hide{
+      width: 95%;
+      margin-left: 5%;
+      transition: 0.3s ease-in;
+      @media screen and (max-width: 768px) {
+        width: 90%;
+        margin-left: 10%;
+      }
+    }
+  }
+  &-slide{
+    width: 100%;
+    height: 50px;
+    background: #004ecb;
+    color: #fff;
+    font-size: 30px;
+    border: none;
   }
   &-section{
     min-height: 80vh;
@@ -38,5 +72,6 @@
     height: 30px;
     border: none;
     border-radius: 30px;
+    margin: 20px auto;
   }
 }
