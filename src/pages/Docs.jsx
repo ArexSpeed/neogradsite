@@ -5,6 +5,7 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 import '../styles/Docs.scss'
+import Footer from '../components/Footer';
 
 const Docs = () => {
   const [bg, setBg] = useState(false)
@@ -22,6 +23,7 @@ const Docs = () => {
       <section className={hide ? 'docs-description' : 'docs-description hide'}>
         <DocsDescription />
       </section>
+      <Footer />
     </div>
   )
 }

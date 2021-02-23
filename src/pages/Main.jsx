@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import ButtonChanger from '../components/ButtonChanger'
 import Examples from '../components/Examples'
+import Footer from '../components/Footer'
 import '../styles/Main.scss'
 
 const Main = () => {
@@ -32,6 +33,10 @@ const Main = () => {
 
       <section className="example">
         <Examples />
+      </section>
+
+      <section className="footer">
+        <Footer />
       </section>
 
     </main>

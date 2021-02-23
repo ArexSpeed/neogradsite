@@ -1,5 +1,6 @@
 import React from 'react'
 import Builder from '../components/Builder'
+import Footer from '../components/Footer'
 import '../styles/Build.scss'
 
 const Build = () => {
@@ -15,6 +16,7 @@ const Build = () => {
       <div className="build-creator">
         <Builder />
       </div>
+      <Footer />
     </div>
   )
 }

@@ -110,6 +110,21 @@
   }
 }
 
+.footer{
+  min-height: 500px;
+  background: #fff;
+  border-radius: 0 500px 0 500px;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #33bebe;
+    z-index: -1;
+  }
+}
+
 // BTN CHANGER
 .btn-info-top{
   display: flex;
