@@ -18,8 +18,12 @@
     @media screen and (max-width: 768px) {
       width: 75%;
     }
+    & ul{
+      margin: auto;
+    }
     & li{
       list-style: none;
+      margin-left: -50px;
       margin-bottom: 10px;
       
       & a{
