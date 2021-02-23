@@ -21,7 +21,7 @@ const AddTransaction = () => {
 
   return (
     <>
-    <button className="btn-rect-long-4 btn-double-border color-yellow-lightyellow"><h3>Add new transaction</h3></button>
+    <button className="btn-rect-long-4 btn-double-border color-yellow-lightyellow"><span style={{fontSize: '20px'}}>Add new</span></button>
       <form className="form-budget" onSubmit={onSubmit}>
         <div className="form-control">
           <input
@@ -43,7 +43,7 @@ const AddTransaction = () => {
             id="amount"
             placeholder="Enter +/- amount..."
           />
-          <label htmlFor="amount">Add "-" if negative</label>
+          <label htmlFor="amount" style={{color: '#fff'}}>Add "-" if negative</label>
         </div>
         <div className="form-button">
         <button className="btn btn-rect-5 btn-round-3 btn-surround-border-hover color-neonblue">Add transaction</button>
