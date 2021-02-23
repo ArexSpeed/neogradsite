@@ -18,10 +18,8 @@
     z-index: -1;
   }
   &-img{
-    width: 50%;
-    height: 500px;
+    max-width: 50%;
     margin: 20px;
-    background: #555;
   }
   &-buttons{
     display: flex;
@@ -122,6 +120,9 @@
     height: 100%;
     background: #33bebe;
     z-index: -1;
+  }
+  @media screen and (max-width: 1024px){
+    border-radius: 0 200px 0 200px;
   }
 }
 

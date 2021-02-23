@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import ButtonChanger from '../components/ButtonChanger'
 import Examples from '../components/Examples'
 import Footer from '../components/Footer'
+import banner from '../images/neogradbanner.png'
 import '../styles/Main.scss'
 
 const Main = () => {
@@ -10,7 +11,9 @@ const Main = () => {
   return (
     <main>
       <section className="hero">
-        <div className="hero-img"></div>
+        <div className="hero-img">
+          <img src={banner} alt='NeoGrad' style={{maxWidth: '100%'}} />
+        </div>
         <h1 className="hero-title">NeoGrad - css library for your buttons</h1>
         <div className="hero-buttons">
           <button className="btn btn-rect-6 btn-round-4 btn-neograd-r color-blue">Get started</button>
