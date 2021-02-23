@@ -247,6 +247,10 @@ export const types = [
     name: 'pulse fast',
     class: '-pulse-fast'
   },
+  {
+    name: 'move',
+    class: '-move'
+  },
 ]
 
 export const colors = [

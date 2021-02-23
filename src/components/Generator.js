@@ -1898,6 +1898,92 @@ if(type === '-pulse-fast' && secondColor){
   }
   `
 }
+if(type === '-move' && !secondColor){
+  typeCode = `
+  color: ${colorText};
+  position: relative;
+  margin: 0 auto;
+  background: transparent;
+  outline: none;
+  border: none;
+  }
+  .button::before,
+  .button::after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(10deg,${lighten},${darken});
+    height: 100%;
+    width: 50%;
+    transform: skewX(30deg);
+    transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    z-index: -2;
+  }
+  .button::before {
+    top: -20%;
+    left: 0rem;
+  }
+  .button::after {
+    top: 20%;
+    left: 50%;
+  }
+  .button:hover::before {
+      top: 0;
+      transform: skewx(0deg);
+      left: 50%;
+    }
+  .button:hover::after{
+      top: 0;
+      transform: skewx(0deg);
+      left: 0;
+  }
+    
+  
+  `
+}
+if(type === '-move' && secondColor){
+  typeCode = `
+  color: ${colorText};
+  position: relative;
+  margin: 0 auto;
+  background: transparent;
+  outline: none;
+  border: none;
+  }
+  .button::before,
+  .button::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    transform: skewX(30deg);
+    transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    z-index: -2;
+  }
+  .button::before {
+    top: -20%;
+    left: 0rem;
+    background: linear-gradient(10deg,${lighten},${darken});
+  }
+  .button::after {
+    top: 20%;
+    left: 50%;
+    background: ${secondColor};
+  }
+  .button:hover::before {
+      top: 0;
+      transform: skewx(0deg);
+      left: 50%;
+    }
+  .button:hover::after{
+      top: 0;
+      transform: skewx(0deg);
+      left: 0;
+  }
+    
+  
+  `
+}
+
   return (
     <div>
         <div className="code-gen">{beginCode + sizeCode + radiusCode + typeCode}</div>
