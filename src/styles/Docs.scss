@@ -75,3 +75,13 @@
     margin: 20px auto;
   }
 }
+.docs-table{
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,.3);
+  background: #555;
+  color: #fff;
+  & th{
+    color: #2979ff;
+  }
+  
+}

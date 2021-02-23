@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {shapes, sizes, radiusSizes, radius, types, colors} from './btnData';
 
 const DocsDescription = () => {
   return (
@@ -32,11 +33,155 @@ const DocsDescription = () => {
       <section className="docs-section" id="shapes">
         <div style={{height: '50px'}}></div>
         <h2>Shapes</h2>
+        <p>NeoGrad has 4 type of shape which you can use. </p>
+        <div className="builder-box" style={{backgroundColor: `#555`}}>
+          
+        {shapes.map((shape) => (
+    <button className={`btn btn${shape.class}-5 btn-solid color-blue`}>
+      {shape.name}
+    </button>
+    ))}
+        </div>
+        <p>Chose your shape and add at the beginnig of your code</p>
+
+        <div className="btn-code"> 
+          {"<button class='btn btn-square'>Square</button>"}<br />
+          {"<button class='btn btn-rect'>Rectangle</button>"} <br />
+          {"<button class='btn btn-long-rect'>Long Rectangle</button>"} <br />
+          {"<button class='btn btn-circle'>Circle</button>"}
+          </div>
+
+          <p>For every shape you have to chose size. You can do it by adding suffix to your shape code f.e btn-square<span style={{color: '#76ff03'}}>-4</span></p>
+          <p><strong>Sizes</strong> to chose are according to this table:</p>
+          <table className="docs-table">
+          <tbody>
+            <tr>
+            <th >Name</th>
+            <th >Suffix</th>
+            <th>Square</th>
+            <th>Rect</th>
+            <th>Long Rect</th>
+            <th >Circle</th>
+            </tr>
+            <tr>
+            <td >Mini</td>
+            <td >
+            <p style={{color: '#76ff03'}}>-1</p>
+            </td>
+            <td>w: 30px;
+            <p>h: 30px;</p>
+            </td>
+            <td>
+            <p>w: 30px;</p>
+            <p>h: 15px;</p>
+            </td>
+            <td>w: 40px;
+            <p>h: 10px;</p>
+            </td>
+            <td >w: 30px;
+            <p>h: 30px;</p>
+            </td>
+            </tr>
+            <tr>
+            <td >Little</td>
+            <td style={{color: '#76ff03'}}>-2</td>
+            <td>w: 50px;
+            <p>h: 50px;</p>
+            </td>
+            <td>w: 50px;
+            <p>h: 25px;</p>
+            </td>
+            <td>w: 80px;
+            <p>h: 20px;</p>
+            </td>
+            <td >w: 50px;
+            <p>h: 50px;</p>
+            </td>
+            </tr>
+            <tr>
+            <td >Small</td>
+            <td style={{color: '#76ff03'}}>-3</td>
+            <td>w: 75px;
+            <p>h: 75px;</p>
+            </td>
+            <td>w: 80px;
+            <p>h: 40px;</p>
+            </td>
+            <td>w: 120px;
+            <p>h: 30px;</p>
+            </td>
+            <td >w: 75px;
+            <p>h: 75px;</p>
+            </td>
+            </tr>
+            <tr>
+            <td >Medium</td>
+            <td style={{color: '#76ff03'}}>-4</td>
+            <td>w: 100px;
+            <p>h: 100px;</p>
+            </td>
+            <td>w: 100px;
+            <p>h: 50px;</p>
+            </td>
+            <td>w: 160px;
+            <p>h: 40px;</p>
+            </td>
+            <td >w: 100px;
+            <p>h: 100px;</p>
+            </td>
+            </tr>
+            <tr>
+            <td >Big</td>
+            <td style={{color: '#76ff03'}}>-5</td>
+            <td>w: 150px;
+            <p>h: 150px;</p>
+            </td>
+            <td>w: 150px;
+            <p>h: 75px;</p>
+            </td>
+            <td>w: 200px;
+            <p>h: 50px;</p>
+            </td>
+            <td >w: 125px;
+            <p>h: 125px;</p>
+            </td>
+            </tr>
+            <tr>
+            <td >Large</td>
+            <td style={{color: '#76ff03'}}>-6</td>
+            <td>w: 200px;
+            <p>h: 200px;</p>
+            </td>
+            <td>w: 200px;
+            <p>h: 100px;</p>
+            </td>
+            <td>w: 240px;
+            <p>h: 60px;</p>
+            </td>
+            <td >w: 150px;
+            <p>h: 150px;</p>
+            </td>
+            </tr>
+            <tr>
+            <td >Huge</td>
+            <td style={{color: '#76ff03'}}>-7</td>
+            <td>w: 300px;
+            <p>h: 300px;</p>
+            </td>
+            <td>w: 250px;
+            <p>h: 125px;</p>
+            </td>
+            <td>w: 320px;
+            <p>h: 80px;</p>
+            </td>
+            <td >w: 200px;
+            <p>h: 200px;</p>
+            </td>
+            </tr>
+            </tbody>
+          </table>
       </section>
-      <section className="docs-section" id="sizes">
-      <div style={{height: '50px'}}></div>
-        <h2>Sizes</h2>
-      </section>
+      
       <section className="docs-section" id="radius">
       <div style={{height: '50px'}}></div>
         <h2>Radius</h2>
@@ -48,6 +193,8 @@ const DocsDescription = () => {
       <section className="docs-section" id="colors">
       <div style={{height: '50px'}}></div>
         <h2>Colors</h2>
+        <p>10 primary colors plus 4 prefix for every which give you 40 colors to chose or even more if you want to edit it by yourself</p>
+        <p>Primary color are: green, blue, red, orange</p>
       </section>
     </div>
   )

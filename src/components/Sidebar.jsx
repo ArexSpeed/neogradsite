@@ -20,13 +20,6 @@ const Sidebar = () => {
         </a>
       </li> 
       <li>
-        <a href='#sizes'>
-        <button className="btn btn-rect-4 btn-border-move color-blue">
-        Sizes
-        </button>
-        </a>
-      </li> 
-      <li>
         <a href='#radius'>
         <button className="btn btn-rect-4 btn-border-move color-blue">
          Radius
