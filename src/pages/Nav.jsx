@@ -8,9 +8,9 @@ const Nav = () => {
     <nav className="nav">
       <div className="nav-brand">NeoGrad</div>
       <div className="nav-links">
-      <Link to='/' className="nav-item"><button className="btn btn-rect-4 btn-neograd color-green">Home</button></Link>
-      <Link to='/build' className="nav-item"><button className="btn btn-rect-4 btn-neograd color-blue">Build</button></Link>
-      <Link to='/docs' className="nav-item"><button className="btn btn-rect-4 btn-neograd color-red">Docs</button></Link>
+      <Link to='/' className="nav-item"><button className="btn btn-rect-3 btn-neograd color-green">Home</button></Link>
+      <Link to='/build' className="nav-item"><button className="btn btn-rect-3 btn-neograd color-blue">Build</button></Link>
+      <Link to='/docs' className="nav-item"><button className="btn btn-rect-3 btn-neograd color-red">Docs</button></Link>
       </div>
       
     </nav>
