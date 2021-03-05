@@ -9,14 +9,14 @@ const DocsDescription = () => {
         <div style={{ height: "50px" }}></div>
         <h2>Get Started</h2>
         <p>
-          NeoGrad is a CSS library and CSS code generator for make buttons and
-          divs with effects on your website. You could start using NeoGrad with
-          download css minified code from github and add this to your projects
+          NeoGrad is a SCSS library and CSS code generator for creating buttons and
+          divs with effects on your website. You can start using NeoGrad by
+          downloading the code from github and add this to your projects
           or you can use our{" "}
           <Link to="/build" style={{ color: "#75a7ff" }}>
             Builder
           </Link>{" "}
-          when you can choose what effect you want by just clicking on the following steps and copy code and add to
+          You can choose your effect by clicking on the following steps and copy code and add to
           your css file without downloading anything.
           <br /> <br />
           If you choose use NeoGrad by download you can add only one one line
