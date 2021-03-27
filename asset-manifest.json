@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/neogradsite/static/css/main.689945f0.chunk.css",
+    "main.js": "/neogradsite/static/js/main.a5c7d972.chunk.js",
+    "main.js.map": "/neogradsite/static/js/main.a5c7d972.chunk.js.map",
+    "runtime-main.js": "/neogradsite/static/js/runtime-main.9bcfa170.js",
+    "runtime-main.js.map": "/neogradsite/static/js/runtime-main.9bcfa170.js.map",
+    "static/js/2.49e1eb24.chunk.js": "/neogradsite/static/js/2.49e1eb24.chunk.js",
+    "static/js/2.49e1eb24.chunk.js.map": "/neogradsite/static/js/2.49e1eb24.chunk.js.map",
+    "static/js/3.9cd8575a.chunk.js": "/neogradsite/static/js/3.9cd8575a.chunk.js",
+    "static/js/3.9cd8575a.chunk.js.map": "/neogradsite/static/js/3.9cd8575a.chunk.js.map",
+    "index.html": "/neogradsite/index.html",
+    "static/css/main.689945f0.chunk.css.map": "/neogradsite/static/css/main.689945f0.chunk.css.map",
+    "static/js/2.49e1eb24.chunk.js.LICENSE.txt": "/neogradsite/static/js/2.49e1eb24.chunk.js.LICENSE.txt",
+    "static/media/ai.e49e9871.png": "/neogradsite/static/media/ai.e49e9871.png",
+    "static/media/budget.9f4a83ed.png": "/neogradsite/static/media/budget.9f4a83ed.png",
+    "static/media/city.1432768b.png": "/neogradsite/static/media/city.1432768b.png",
+    "static/media/neogradbanner.9cc30942.png": "/neogradsite/static/media/neogradbanner.9cc30942.png",
+    "static/media/nglogobig.767d6544.png": "/neogradsite/static/media/nglogobig.767d6544.png",
+    "static/media/nglogonormal.1e9ae7da.png": "/neogradsite/static/media/nglogonormal.1e9ae7da.png",
+    "static/media/yoga.e34a7152.png": "/neogradsite/static/media/yoga.e34a7152.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9bcfa170.js",
+    "static/js/2.49e1eb24.chunk.js",
+    "static/css/main.689945f0.chunk.css",
+    "static/js/main.a5c7d972.chunk.js"
+  ]
+}
