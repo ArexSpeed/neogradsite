@@ -9,7 +9,11 @@ const Footer = () => {
       <div style={{maxWidth: '80%'}}>
         <img src={logo} alt="NeoGrad" style={{maxWidth: '80%'}} />
       </div>
-      <div>AX Studio &copy; {new Date().getFullYear()} All rights reserved <GitHubIcon /></div>
+      <div>AX Studio &copy; {new Date().getFullYear()} All rights reserved 
+      <a href="https://github.com/ArexSpeed/neogradcss" target="_blank">
+        <GitHubIcon />
+      </a>
+      </div>
     </div>
   )
 }

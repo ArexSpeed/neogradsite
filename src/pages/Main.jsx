@@ -5,6 +5,7 @@ import Examples from '../components/Examples'
 import Footer from '../components/Footer'
 import banner from '../images/neogradbanner.png'
 import '../styles/Main.scss'
+import video from '../video/buildvideo.mp4'
 
 const Main = () => {
 
@@ -16,8 +17,8 @@ const Main = () => {
         </div>
         <h1 className="hero-title">NeoGrad - css library for your buttons</h1>
         <div className="hero-buttons">
-          <button className="btn btn-rect-6 btn-round-4 btn-neograd-r color-blue">Get started</button>
-          <button className="btn btn-rect-6 btn-round-4 btn-neograd color-violet">Github</button>
+          <Link to="/build" className="btn btn-rect-6 btn-round-4 btn-neograd-r color-blue">Get started</Link>
+          <a href="https://github.com/ArexSpeed/neogradcss" target="_blank" className="btn btn-rect-6 btn-round-4 btn-neograd color-violet">Github</a>
         </div>
       </section>
       <section className="info">
@@ -29,7 +30,7 @@ const Main = () => {
       <h2 className="section-title">Build your button</h2>
       <h3>Just few click with out builder</h3>
         <div className="video">
-      <video className="main-video" width="956" height="385" src="/video/buildvideo.mp4" autoPlay muted loop/>
+      <video className="main-video" width="956" height="385" src={video} autoPlay muted loop/>
       </div>
       <Link to='/build'><button class="btn btn-rect-5 btn-border-move-light color-neonblue">Builder</button></Link>
       </section>

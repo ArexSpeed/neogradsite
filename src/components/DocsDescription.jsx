@@ -35,9 +35,9 @@ const DocsDescription = () => {
         </div>
         <p>
           All code for NeoGrad is available on this{" "}
-          <Link to="/" style={{ color: "#75a7ff" }}>
+          <a href="https://github.com/ArexSpeed/neogradcss" target="_blank" style={{ color: "#75a7ff" }}>
             Github
-          </Link>{" "}
+          </a>{" "}
           you can download this code and start creating{" "}
         </p>
         <p>

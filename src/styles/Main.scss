@@ -29,6 +29,14 @@
     flex-direction: column;
   }
   }
+  & a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    
+  }
   &-title{
   font-size: 35px;
   margin: 0;
