@@ -9,18 +9,13 @@ const DocsDescription = () => {
         <div style={{ height: "50px" }}></div>
         <h2>Get Started</h2>
         <p>
-          NeoGrad is a SCSS library and CSS code generator for creating buttons and
-          divs with effects on your website. You can start using NeoGrad by
-          downloading the code from github and add this to your projects
-          or you can use our{" "}
+        NeoGrad is a SCSS library and CSS code generator for creating buttons and divs with effects on your website. You can start using NeoGrad by downloading the code from this github and add it to your projects or you can use our{" "}
           <Link to="/build" style={{ color: "#75a7ff" }}>
             Builder
           </Link>{" "}
-          You can choose your effect by clicking on the following steps and copy code and add to
-          your css file without downloading anything.
+          You can choose your effect by clicking on the following steps and copy code and add to your css file without downloading anything.
           <br /> <br />
-          If you choose use NeoGrad by download you can add only one one line
-          code for you button in class name. This code look like this: <br />
+          If you choose to use NeoGrad by download you can add only one line code for your button in the class name. This code looks like this: <br />
         </p>
         <div className="btn-code">
           {
@@ -41,9 +36,7 @@ const DocsDescription = () => {
           you can download this code and start creating{" "}
         </p>
         <p>
-          When you want to use NeoGrad without downloading additional files,
-          just use the Builder which generates the code for you to copy. You can
-          then edit it according to your own ideas
+        When you want to use NeoGrad without downloading additional files, just use the Builder which generates the code for you to copy. You can then edit it according to your own ideas.
         </p>
         <p>Example of generate code for blue gradient button</p>
         <div className="btn-code">
@@ -67,7 +60,7 @@ const DocsDescription = () => {
             </button>
           ))}
         </div>
-        <p>Chose your shape and add at the beginnig of your code</p>
+        <p>Chose your shape and add at the beginning of your code</p>
 
         <div className="btn-code">
           {"<button class='btn btn-square'>Square</button>"}
@@ -282,7 +275,7 @@ const DocsDescription = () => {
         <table className="docs-table">
           <tbody>
             <tr>
-              <th>Size</th>
+              <th>Name</th>
               <th>class</th>
             </tr>
             {radius.map(type => (
@@ -299,7 +292,7 @@ const DocsDescription = () => {
       <section className="docs-section" id="types">
         <div style={{ height: "50px" }}></div>
         <h2>Types</h2>
-        <p>The most important stage when you choose effect for your buttons. At this moment are 30 effect to choose.</p>
+        <p>The most important stage when you choose an effect for your buttons. At this moment are 30 effects to select.</p>
         <p>You can add effect to your button by adding <span style={{ color: "#76ff03" }}>btn-effect</span> to your class</p>
         <p>Available type of effects: </p>
         <div className="builder-box" style={{ backgroundColor: `#555` }}>
@@ -331,14 +324,13 @@ const DocsDescription = () => {
       <section className="docs-section" id="colors">
         <div style={{ height: "50px" }}></div>
         <h2>Colors</h2>
-        <p>Final stage, add colors for your button. Pick from 12 primary colors plus 3 prefix for every which give you 48 colors to
-          chose or even more if you want to edit it by yourself</p>
+        <p>Final stage, add colors for your button. Pick from 12 primary colors plus  additional colors for every which give you 48 colors to select or even more if you want to edit it by yourself</p>
        
         <p>Primary color are: <span style={{ color: "#76ff03" }}>green</span>, <span style={{ color: "#2979ff" }}>blue</span>, <span style={{ color: "#ff1744" }}>red</span>, <span style={{ color: "#ab47bc" }}>violet</span>, <span style={{ color: "#ffeb3b" }}>yellow</span>, <span style={{ color: "#ff7d00" }}>orange</span>, <span style={{ color: "#ec407a" }}>pink</span>, <span style={{ color: "#202124" }}>black</span>, <span style={{ color: "#ffffff" }}>white</span>, <span style={{ color: "#ffd700" }}>gold</span>, <span style={{ color: "#c0c0c0" }}>silver</span>, <span style={{ color: "#a52a2a" }}>brown</span></p>
         <p>The prefix for colors are: light, dark, neon</p>
-        <p>That's mean you can choose 4 version of one color for example blue:</p>
+        <p>That's mean you can choose 4 versions of one color for example blue:</p>
         <p><span style={{ color: "#2979ff" }}>blue</span>, <span style={{ color: "#75a7ff" }}>lightblue</span>, <span style={{ color: "#004ecb" }}>darkblue</span>, <span style={{ color: "#45f3ff" }}>neonblue</span>,</p>
-        <p>If you want to add color to button just add at the end of class the color name 
+        <p>If you want to add color to a button just add at the end of class the color name 
            <span style={{ color: "#76ff03" }}> color-green</span></p>
           <div className="btn-code">
           {
