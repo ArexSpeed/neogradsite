@@ -1,7 +1,11 @@
 .App {
   text-align: center;
   max-width: 100vw;
-  overflow: hidden;
+  background: #07020D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
